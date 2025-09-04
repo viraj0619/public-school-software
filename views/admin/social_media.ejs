@@ -1,0 +1,70 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background heading">
+            <h3 class="text-dark" style="font-weight: 600;">Update Social Media Details</h3>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/update_social_media" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-3">
+                    Upload Your Logo
+                    <input type="file" name="main_logo" accept="image/*" class="form-control" >
+                </div>
+                <div class="col-md-1">
+                  <img src="/admin/uploads/<%=social_info.main_logo%>" height="100%" width="100%">
+              </div>
+                <div class="col-md-4">
+                    Twiter Link
+                    <input type="text" name="twiter_link" class="form-control" value="<%=social_info.twiter_link%>" required>
+                    <input type="hidden" name="social_links_id " class="form-control" value="<%=social_info.social_links_id %>" required>
+
+                </div>
+                <div class="col-md-4">
+                  Facebook Link
+                  <input type="text" name="facebook_link" class="form-control" value="<%=social_info.facebook_link%>" required>
+              </div>
+              <div class="col-md-4">
+                YourTube Link
+                <input type="text" name="youtube_link" class="form-control" value="<%=social_info.youtube_link%>" required>
+            </div>
+            <div class="col-md-4">
+              Google Link
+              <input type="text" name="google_link" class="form-control" value="<%=social_info.google_link%>" required>
+          </div>
+          <div class="col-md-4">
+            School Contact
+            <input type="text" name="school_contact" class="form-control" value="<%=social_info.school_contact%>" required>
+        </div>
+        <div class="col-md-4">
+          Linkedin Link
+          <input type="text" name="linkedin_link" class="form-control" value="<%=social_info.linkedin_link%>" required>
+      </div>
+      <div class="col-md-4">
+        Insta Link
+        <input type="text" name="insta_link" class="form-control" value="<%=social_info.insta_link%>" required>
+    </div>
+    <div class="col-md-4">
+      School Email
+      <input type="email" name="school_email" class="form-control" value="<%=social_info.school_email%>" required>
+  </div>
+  <div class="col-md-4">
+    School Time
+    <input type="text" name="school_time" class="form-control" value="<%=social_info.school_time%>" required>
+</div>
+<div class="col-md-4">
+  School Address
+  <input type="text" name="school_address" class="form-control" value="<%=social_info.school_address%>" required>
+</div>
+               
+                <div class="col-md-12 d-flex justify-content-center mt-4">
+                    <button class="btn btn-success">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

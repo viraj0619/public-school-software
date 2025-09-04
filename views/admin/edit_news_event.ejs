@@ -1,0 +1,54 @@
+<%-include('navbar.ejs')%>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 text-center subname">
+            <h3>Edit Event & News</h3>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 text-center ">
+            <h3><b><u>Card No:-<%=cards.card_id%></u></b></h3>
+        </div>
+    </div>
+</div>
+
+<form action="/admin/update_card" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="card_id" value="<%=cards.card_id%>">
+<div class="container-fluid">
+    <div class="row my-3  py-3">
+            <div class="col-md-6 mt-2">
+                <div class="col-md-12">
+                    <b> Upload Card Image:-</b>  <input type="file" name="card_img" id="" class="form-control w-50 form-control">
+                    
+                    <img src="/uploads/<%=cards.card_img%>" alt=" Loading..." height="150px" width="150px" class="shadow p-0" style="position: relative; left:320px ; bottom: 60px;">
+                   
+                </div>
+
+            </div>
+            <div class="col-md-6 mt-2">
+                <b>Card Title :- </b><textarea type="text" name="card_title" id="" class="form-control"  ><%=cards.card_title%></textarea>
+            </div>
+            <div class="col-md-12 ">
+               <b>  Card Description:-</b>  <textarea type="text" name="card_descrip" id="" class="form-control" rows="4">
+                <%=cards.card_descrip%>
+               </textarea>
+            </div>
+           <div class="text-center my-5">
+
+                    <button type="submit" class="btn btn-primary ps-3 pe-3 ms-2">Save</button>
+           </div>
+
+    </div>
+</div>
+</form>
+
+
+
+
+
+
+
+<%-include('footer.ejs')%>

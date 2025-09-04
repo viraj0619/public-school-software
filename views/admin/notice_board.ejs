@@ -1,0 +1,53 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background heading">
+            <h3 class="text-dark" style="font-weight: 600;">Add Notice Board</h3>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/add_notic_board" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+               
+                <div class="col-md-4">
+                     Title
+                    <input type="text" name="notice_title" class="form-control" value="" required>
+                </div>
+                <div class="col-md-8">
+                  Sub Title
+                  <input type="text" name="notice_subtitle" required class="form-control" value="">
+              </div>
+                             
+                <div class="col-md-12 d-flex justify-content-center mt-4">
+                    <button class="btn btn-success">Add</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table table-success table-striped table-bordered mt-4">
+    <tr>
+        <th>Action</th>
+        <th>SrNO</th>
+        <th>Name</th>
+        <th>Post</th>
+        
+    </tr>
+    <%for(var i=0;i<notic_info.length;i++) {%>
+    <tr>
+      <td>
+        <a href="/admin/edit_notic_info/<%= notic_info[i].notic_board_id %>">
+          <i class="fa fa-edit text-success fs-3"></i>
+        </a>
+        <a href="/admin/delete_notic_info/<%= notic_info[i].notic_board_id %>" onclick="return confirm('Are You Sure?')">
+          <i class="fa fa-trash text-danger fs-3"></i>
+        </a>
+      </td>      <td><%=i+1%></td>
+      <td><%=notic_info[i].notice_title%></td>
+      <td><%=notic_info[i].notice_subtitle%></td>
+  </tr>
+<%}%></table>
+
+<%- include("footer.ejs") %>

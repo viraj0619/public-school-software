@@ -1,0 +1,125 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg,  #2446A2, #EAEDF6);
+} */
+
+.herohead{
+    text-align: center;
+    background: linear-gradient(180deg, #2446A2, #EAEDF6);
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+ .containerN{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+  .containerN .card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: #EAEDF6;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 15);
+    transition: 0.7s;
+}
+
+ .containerN .card:hover{
+    height: 400px;
+}
+
+ .containerN .card .imgbx{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.7s;
+}
+.containerN .card:hover .imgbx{
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+ .containerN .card .imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ .containerN .card .content{
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.7s;
+}
+
+.containerN .card:hover .content{
+    top: 130px;
+    height: 250px;
+}
+
+ .containerN .card .content h2{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+ .containerN .card .content p{
+    color: #333;
+}
+
+#read-more{
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    background: #6086ef;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    /* margin-bottom: 20px; */
+    border-radius: 8px;
+}
+
+#read-more:hover{
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    background: #fff;
+    color: #1c1818;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+

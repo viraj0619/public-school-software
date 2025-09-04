@@ -1,0 +1,48 @@
+<%- include("navbar.ejs") %>
+<!-- popup form -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <section>
+                <div class="container4"></div>
+                <div id="open-modal" class="">
+                    <div>
+                        <div class="row bg-light" style="display: flex; justify-content: center;">
+                            <form id="admissionForm" method="post" class="row g-2 p-3">
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault04" class="form-label lablefs text-dark">Select Class :-</label>
+                                    <select class="form-select py-2 alt" required id="validationDefault04" name="selected_class" onchange="handleChange(event)">
+                                        <option value="" selected default >---Choose---</option>
+                                        <option value="1st">1<sup>st</sup></option>
+                                        <option value="2nd">2<sup>nd</sup></option>
+                                        <option value="3rd">3<sup>rd</sup></option>
+                                        <option value="4th">4<sup>th</sup></option>
+                                        <option value="5th">5<sup>th</sup></option>
+                                        <option value="6th">6<sup>th</sup></option>
+                                        <option value="7th">7<sup>th</sup></option>
+                                        <option value="8th">8<sup>th</sup></option>
+                                        <option value="9th">9<sup>th</sup></option>
+                                        <option value="10th">10<sup>th</sup></option>
+                                        <option value="11th">11<sup>th</sup></option>
+                                        <option value="12th">12<sup>th</sup></option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 col-6 text-center">
+                                    <button class="btn btn-primary btn-sm" type="submit" value="submit">Continue</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<script>
+    function handleChange(event) {
+        var selectedClass = event.target.value;
+        var form = document.getElementById('admissionForm');
+        form.action = `/update_admission/${selectedClass}`;
+    }
+</script>
+<%- include("footer.ejs") %>

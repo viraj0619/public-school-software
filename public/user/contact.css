@@ -1,0 +1,328 @@
+    .bg{
+        background-color: #2446A2 !important;
+    }
+
+    /*======================================
+    21. Contact CSS
+
+    <!-- "Color for background "
+primary color --- #2446A2
+Secondary color-- #EAEDF6 -->
+    ========================================*/
+    .contact-us {
+        position: relative;
+        z-index: 43;
+    }
+    .contact-us .title{
+        margin-bottom: 30px;
+    }
+    .contact-us .title h4 {
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: #F7941D;
+    }
+    .contact-us .title h3 {
+        font-size: 25px;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+    .contact-us .single-head {
+        padding: 50px;
+        box-shadow: 0px 0px 15px #0000001a;
+        height: 100%;
+    }
+    .contact-us .single-info {
+        text-align: left;
+        margin-bottom:30px;
+    }
+    .contact-us .single-info i {
+        color: #fff;
+        font-size: 18px;
+        display: inline-block;
+        margin-bottom: 15px;
+        height: 40px;
+        width: 40px;
+        display: block;
+        text-align: center;
+        border-radius: 3px;
+        line-height: 40px;
+        background:#F7941D;
+    }
+    .contact-us .single-info ul
+    .contact-us .single-info ul li{
+        margin-bottom:5px;
+    }
+    .contact-us .single-info ul li:last-child{
+        margin-bottom:0;
+    }
+    .contact-us .single-info ul li a{
+        font-weight:400;
+    }
+    .contact-us .single-info ul li a:hover{
+        color:#F7941D;
+    }
+    .contact-us .single-info .title {
+        margin-bottom: 10px;
+        font-weight: 500;
+        color: #333;
+        font-size: 18px;
+    }
+    .contact-us .form-main {
+        box-shadow: 0px 0px 15px #0000001a;
+        padding: 50px;
+    }
+    .contact-us .form .form-group input {
+        height: 48px;
+        line-height: 48px;
+        width: 100%;
+        border: 1px solid #e6e2f5;
+        padding: 0px 20px;
+        color: #333;
+        border-radius: 0px;
+        font-weight: 400;
+    }
+    .contact-us .form .form-group textarea {
+        height: 180px;
+        width: 100%;
+        border: 1px solid #e6e2f5;
+        padding: 15px 20px;
+        color: #333;
+        border-radius: 0px;
+        resize: none;
+        font-weight:400;
+    }
+    .contact-us .form .form-group label {
+        color: #333;
+        position: relative;
+    }
+    .contact-us .form .form-group label span {
+        color: #ff2c18;
+        display: inline-block;
+        position: absolute;
+        right: -12px;
+        top: 4px;
+        font-size: 16px;
+    }
+    .contact-us .form .button {
+        margin:0;
+    }
+    .contact-us .form .button .btn {
+        height: 50px;
+        border: none;
+    }
+    #myMap {
+        height: 500px;
+        width: 100%;
+    }
+    /*======================================
+    End Contact CSS
+    ========================================*/
+
+    .border
+    {
+        border: 5px ridge #2d4a9a !important;
+        /* padding: 10px !important; */
+    }
+    
+
+    /* button css */
+    .btn {
+        position: relative;
+        font-weight: 500;
+        font-size:14px;
+        color: #fff;
+        background: #333;
+        display: inline-block;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        z-index: 5;
+        display: inline-block;
+        padding: 13px 32px;
+        border-radius: 0px;
+        text-transform:uppercase;
+    }
+    .btn:hover{
+        color:#fff;
+        background:#2446A2;
+    }
+    #scrollUp {
+        right: 10px;
+        z-index: 33;
+        bottom: 10px;
+        text-align: center;
+    }
+    #scrollUp i{
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        background:transparent;
+        background:#222;
+        border-radius: 0;
+        font-size: 18px;
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        transition: all 500ms ease;
+        display:block;
+        color: #fff;
+        box-shadow: 0px 4px 19px #00000038;
+    }
+    #scrollUp i:hover{
+        background:#F7941D;
+        color:#fff;
+    }
+
+    /* ///so what you think  */
+
+    #call-to-action {
+        background: #2446A2;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        color: #fff;
+    }
+    #call-to-action .block {
+        position: relative;
+        z-index: 9;
+        color: #fff;
+    }
+    #call-to-action .block h2 {
+        margin-bottom: 15px;
+        color: #fff;
+    }
+    #call-to-action .block p {
+        font-size: 15px;
+        font-weight: 300;
+        font-family: "Roboto", sans-serif;
+        margin-top: 20px;
+    }
+    #call-to-action .block .btn-contact {
+        background: #fff;
+        border: 2px solid #fff;
+        color: #02bdd5;
+        padding: 15px 34px;
+        margin-top: 20px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-radius: 0;
+        transition: all linear 0.2s;
+    }
+    #call-to-action .block .btn-contact i {
+        margin-right: 10px;
+    }
+    #call-to-action .block .btn-contact:hover {
+        color: #fff;
+        background: #2446A2;
+    }
+    
+    /* ////////////get in touch with bg img  */
+    .bg {
+        background-color: #2446A2 !important;
+    }
+    
+    /* Page title section */
+    .page-title {
+        position: relative;
+        padding: 120px 0 70px;
+    }
+    
+    .bg-1 {
+        background: url("https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/contact-bg.jpg") no-repeat center center;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(34, 58, 102, 0.9); /* Adjust the opacity as needed */
+        z-index: 1;
+    }
+    
+    .page-title .block {
+        position: relative;
+        z-index: 2; /* Ensure the text is above the overlay */
+        color: white;
+    }
+    
+    .text-white {
+        color: white !important;
+    }
+    
+    .text-lg {
+        font-size: 50px;
+    }
+    
+    @media (max-width: 480px) {
+        .text-lg {
+            font-size: 28px;
+        }
+    }
+    
+
+
+    /* send button  */
+    /* button {
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(to bottom right, #2446A2 60%,#EAEDF6 100%);
+  color: white;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+button .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+button:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:hover svg {
+  transform: rotate(45deg);
+} */

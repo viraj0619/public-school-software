@@ -1,0 +1,63 @@
+.herohead{
+    /* background-color: rgb(252, 34, 194); */
+    color:orange;
+    font-size: 50px;
+    font-weight: 600;
+}
+.a2z_form{
+    height: 600px;
+    width: 100%;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.a2z_form span{
+    font-size: 12px;
+}
+.a2z_form button{
+    /* background-color: rgb(252, 34, 194); */
+    background-color: #2446A2;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-left: 58%;
+}
+.secure_login{
+    display: none;
+}
+
+.login_master{
+    height: 740px;
+    width: 100%;
+    background-color: rgb(80,67,115);
+}
+@media(max-width:1000px){
+    .display_md_none{
+        display: none;
+    }
+    .a2z_form{
+    height: 380px;
+    width: 100%;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+    .a2z_form button{
+    /* background-color: rgb(252, 34, 194); */
+    background-color: #2446A2;
+    /* padding: 7px 15px; */
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    margin-left: 0%;
+}
+.secure_login{
+    display: block;
+    color: white;
+}
+.login_master{
+    height: 665px;
+    width: 100%;
+    background-color: rgb(80,67,115);
+}
+}

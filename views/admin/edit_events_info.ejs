@@ -1,0 +1,34 @@
+
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background">
+            <h1 class="text-dark" style="font-weight: 600;">Update Recent Events</h1>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/update_events" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-4">
+                    Upload Events Image
+                    <input type="file" name="events_img" accept="image/*" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <img src="/admin/uploads/<%=events_info.events_img%>" height="100% " width="100%">
+              </div>
+                <div class="col-md-6">
+                   Events Name
+                    <input type="text" name="events_name" class="form-control" required value="<%=events_info.events_name%>">
+                    <input type="hidden" name="recent_events_id" class="form-control" value="<%=events_info.recent_events_id %>" required>
+                    
+                </div>
+                <div class="col-md-12 d-flex justify-content-center mt-4">
+                    <button class="btn btn-success">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

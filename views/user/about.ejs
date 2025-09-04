@@ -1,0 +1,284 @@
+<%-include('navbar.ejs')%>
+<section class="about-section pb-0 pt-0">
+  <div class="container-fluid bg-light p-5">
+      <div class="row">
+          <div class="col-md-12 text-center pb-4 mb-5">
+              <h2 class="text- " style="color: #2446A2;">Principal Message</h2>
+              <div class="borbtm2"></div>
+          </div>
+          <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2 mt-5 mt-md-0">
+              <div class="inner-column">
+                  <div class="text"><%=principal_info.principal_par1%></div>
+                  <div class="text"><%=principal_info.principal_par2%>
+                  </div>
+                  <div class="text"> 
+                    <%=principal_info.principal_par3%>
+                  </div>
+                  <div class="btn-box">
+                      <a href="#" class="theme-btn btn-style-one">Contact Us</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="image-column col-lg-6 col-md-12 col-sm-12 mt-5 mb-5 mb-md-0">
+              <div class="inner-column wow fadeInLeft">
+                  <div class="author-desc">
+                      <h2><%=principal_info.principal_name%></h2>
+                      <span><%=principal_info.principal_post%></span>
+                  </div>
+                  <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img
+                              title="Rahul Kumar Yadav" src="/admin/uploads/<%=principal_info.principal_photo%>"
+                              alt=""></a></figure>
+
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<section class="mt-5 pt-3">
+  <div class="container shadow p-4 mb-5">
+      <div class="row">
+          <div class="col-md-12 text-center pb-4">
+              <h2 class="text- " style="color: #2446A2;">About Us</h2>
+              <div class="borbtm4"></div>
+          </div>
+          <div class="col-md-12 text-center ">
+              <p class="text-center text-dark"><%=about_info.about_info%></p>
+          </div>
+          <div class="col-md-12 text-start   pt-2">
+              <a href="#"> <button class="btn btn-outline-primary  btn-sm">Read More</button></a>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<section class="pt-4 mb-5">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12 text-center pb-4">
+              <h2 class="text- " style="color: #2446A2;">Notice Board</h2>
+              <div class="borbtm1"></div>
+          </div>
+          <%for(var i=0;i<notic_info.length;i++) {%>
+          <div class="col-md-3 plmedia mt-4 mt-md-0" data-aos="fade-up" data-aos-duration="3000">
+              <div class="card w-100">
+                  <a class="card1 " href="#">
+                      <p class="cardp1"><%=notic_info[i].notice_title%></p>
+                      <p class="small mt-2"><%=notic_info[i].notice_subtitle%></p>
+                      <button class="btn mt-1 btn-outline-warning btn-sm hobtnwhite">Read More</button>
+                      <div class="hr mt-4"></div>
+                      <div class="go-corner" href="#">
+                          <div class="go-arrow">
+                              →
+                          </div>
+                      </div>
+                  </a>
+              </div>
+          </div>
+        <%}%>
+      </div>
+  </div>
+</section>
+
+<section style="overflow-x: hidden;" class="mt-5">
+  <div class="count-up p-0">
+      <div class="wrapper">
+          <i class="fas text- fa-users" style="color: #2446A2;"></i>
+          <div class="counter" data-count="2050">0</div>
+          <h6>Book Library</h6>
+      </div>
+      <div class="wrapper">
+          <i class="fas text- fa-newspaper" style="color: #2446A2;"></i>
+          <div class="counter" data-count="2105">0</div>
+          <h6>Book Library</h6>
+      </div>
+      <div class="wrapper">
+          <i class="fas text- fa-clock" style="color: #2446A2;"></i>
+          <div class="counter" data-count="3200">0</div>
+          <h6>Book Library</h6>
+      </div>
+      <div class="wrapper">
+          <i class="fas text- fa-clock" style="color: #2446A2;"></i>
+          <div class="counter" data-count="3200">0</div>
+          <h6>Book Library</h6>
+      </div>
+      <div class="wrapper">
+          <i class="fas text- fa-users" style="color: #2446A2;"></i>
+          <div class="counter" data-count="2050">0</div>
+          <h6>Book Library</h6>
+      </div>
+      <div class="wrapper">
+          <i class="fas text- fa-newspaper" style="color: #2446A2;"></i>
+          <div class="counter" data-count="2105">0</div>
+          <h6>Book Library</h6>
+      </div>
+
+</section>
+
+<section class="pt-4">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 text-center pb-4">
+              <h2 class="text- " style="color: #2446A2;">Recent Events</h2>
+              <div class="borbtm"></div>
+          </div>
+          <%for(var i=0;i<events_info.length;i++){%>
+          <div class="col-md-3" data-aos="fade-up" data-aos-duration="2000">
+              <figure class="snip">
+                  <img class="snip__image"
+                      src="/admin/uploads/<%=events_info[i].events_img%>" alt="card" />
+                  <figcaption class="snip__figcaption">
+                      <h3 class="snip__title"><%=events_info[i].events_name%></h3>
+                      <a class="snip__text" href="#">
+                          <button class="btn btn-outline-warning mt-3">Read More</button>
+                      </a>
+                  </figcaption>
+                  <a class="snip__link" href="#"></a>
+              </figure>
+          </div>
+          <%}%>
+      </div>
+  </div>
+</section>
+
+
+<!-- <section>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+              <div id="testimonial-slider" class="owl-carousel">
+                  <div class="testimonial">
+                      <div class="pic">
+                          <img
+                              src="https://media.istockphoto.com/id/1336832660/photo/male-teenage-student-in-yellow-background-stock-photo.jpg?s=170667a&w=0&k=20&c=fCWYbjgy9ZFb2Fi5xf6UliSS737jr9-diACw3REtCrk=">
+                      </div>
+                      <h3 class="testimonial-title mb-4 mt-2">
+                          <a href="#">Name</a>
+                          <small>- Roshan Kale</small>
+                      </h3>
+                      <div class="testimonial-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eum excepturi incidunt
+                              laudantium nesciunt omnis, provident repudiandae rerum sed! Amet blanditiis eaque
+                              eu!
+                          </p>
+                      </div>
+
+                  </div>
+
+                  <div class="testimonial">
+                      <div class="pic">
+                          <img
+                              src="https://img.freepik.com/premium-photo/teenager-student-girl-yellow-pointing-finger-side_1368-40175.jpg">
+                      </div>
+                      <h3 class="testimonial-title mb-4 mt-2">
+                          <a href="#">Name</a>
+                          <small>- Mohini Raut</small>
+                      </h3>
+                      <div class="testimonial-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eum excepturi incidunt
+                              laudantium nesciunt omnis, provident repudiandae rerum sed! Amet blanditiis eaque eu
+                          </p>
+                      </div>
+
+                  </div>
+
+                  <div class="testimonial">
+                      <div class="pic">
+                          <img
+                              src="https://media.istockphoto.com/id/1438437093/ro/fotografie/t%C3%A2n%C4%83r%C4%83-femeie-adult%C4%83-%C3%AEn-fotografii-de-studio-care-face-expresii-faciale-%C8%99i-folosind.jpg?s=612x612&w=0&k=20&c=ldJQ_DhW2MTky6cscB5FlaD5p0QxAdmFqSIQccT9nPw=">
+                      </div>
+                      <h3 class="testimonial-title mb-4 mt-2">
+                          <a href="#">Name</a>
+                          <small>- Shravni Mule</small>
+                      </h3>
+                      <div class="testimonial-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eum excepturi incidunt
+                              laudantium nesciunt omnis, provident repudiandae rerum sed! Amet blanditiis eaque
+                              eum
+                              odit repellendus!
+                          </p>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section> -->
+              <!-- icard -->
+<section class="mt-5">
+ <div class="text-center">
+  <h2 class=" mt-5" style="color: #2446A2;">School Teachers</h2>
+  <div class=" borbtm" style="margin-left: 540px;"></div>
+
+
+ </div>
+  <div class="icard">
+      <div class="container22">
+        <%for(var i=0;i<teacher_info.length;i++){%>
+          <div class="card" style="--clr: #009688">
+              <div class="img-box">
+                  <img src="/admin/uploads/<%=teacher_info[i].teacher_photo%>">
+              </div>
+              <div class="content">
+                  <h2><%=teacher_info[i].teacher_name%></h2>
+                  <h5 class="fw-bold"><%=teacher_info[i].teacher_qul%></h5>
+                  <h5 class="fw-bold"><%=teacher_info[i].teacher_id%></h5>
+                  <h5 class="fw-bold"><%=teacher_info[i].teacher_mobile%> </h5>
+                  <h5 class="fw-bold"><%=teacher_info[i].teacher_email%></h5>
+                  
+              </div>
+          </div>
+          <%}%>
+      </div>
+  </div>
+  
+</section>
+<script>
+  AOS.init();
+</script>
+<script>
+  $(document).ready(function () {
+    $(".counter").each(function () {
+        var count = $(this);
+        var countTo = count.attr('data-count');
+
+        $({ countNum: count.text() }).animate({
+            countNum: countTo,
+        }, {
+            duration: 7000,
+            easing: 'linear',
+            step: function () {
+                count.text(Math.floor(this.countNum));
+            },
+            complete: function () {
+                count.text(this.countNum);
+            }
+        });
+    });
+});
+
+
+
+// testominal
+    $(document).ready(function(){
+        $('#testimonial-slider').owlCarousel({
+            items:1,
+            itemsDesktop:[1000,1],
+            itemsDesktopSmall:[979,1],
+            itemsTablet:[768,1],
+            pagination: false,
+            navigation:true,
+            navigationText:["",""],
+            slideSpeed:1000,
+            autoPlay:true
+        });
+    });
+
+
+</script>
+<%-include('footer.ejs')%>

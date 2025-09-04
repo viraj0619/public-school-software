@@ -1,0 +1,49 @@
+<%-include('navbar.ejs')%>
+<div class="container ">
+    <div class="row">
+        <div class="col-md-12">
+            <div class=" heading text-center">
+                <h3>Enquiry List</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-success table-striped ">
+                <tr class="table-dark">
+                    <th>Sr.no</th>
+                    <th>Date & Time</th>
+                    <th>Full Name</th>
+                    <th>Subject</th>
+                    <th>Email</th>
+                    <th>Mobile No</th>
+                    <th>Message</th>
+                </tr>
+                    <%  for(var i=0;i<enq_list.length;i++) {  %>
+
+
+                            <tr>
+                                <td><%=i+1%></td>
+                                <td><%=enq_list[i].date%></td>
+                                <td><%=enq_list[i].name%></td>
+                                <td><%=enq_list[i].subject%></td>
+                                <td><%=enq_list[i].email%></td>
+                                <td><%=enq_list[i].mobile_no%></td>
+                                <td><%=enq_list[i].message%></td>
+                            </tr>
+
+
+                        <% } %>
+               
+                </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%-include('footer.ejs')%>

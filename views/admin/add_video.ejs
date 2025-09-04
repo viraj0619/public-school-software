@@ -1,0 +1,53 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background heading">
+            <h3 class="text-dark" style="font-weight: 600;">Add YouTube Video Links</h3>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/add_video_links" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-md-4">
+                Link 1
+                <input type="text" name="video_link1" class="form-control" value="" required>
+            </div>
+            <div class="col-md-4">
+              Link 2
+              <input type="text" name="video_link2" class="form-control" value="" required>
+          </div>
+          <div class="col-md-4">
+            Link 3
+            <input type="text" name="video_link3" class="form-control" value="" required>
+        </div>
+              <div class="col-md-12 d-flex justify-content-center mt-4">
+                  <button class="btn btn-success">Add Video</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table table-success table-striped table-bordered mt-4">
+  <tr>
+      <th>Action</th>
+      <th>SrNO</th>
+      <th>YouTube Link 1</th>
+      <th>YouTube Link 2</th>
+      <th>YouTube Link 3</th>   
+  </tr>
+  <%for(var i=0;i<youtube_link.length;i++) {%>
+  <tr>
+    <td>
+      <a href="/admin/delete_youtube_link/<%=youtube_link[i].youtube_links_id%>" onclick="return confirm('Are You Sure?')">
+        <i class="fa fa-trash text-danger fs-4"></i>
+      </a>
+    </td>   
+     <td><%=i+1%></td>
+    <td><%=youtube_link[i].video_link1%></td>
+    <td><%=youtube_link[i].video_link2%></td>
+    <td><%=youtube_link[i].video_link3%></td>
+</tr>
+<%}%></table>
+<%- include("footer.ejs") %>

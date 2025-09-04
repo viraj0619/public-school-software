@@ -1,0 +1,71 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+   
+    <div class="row mt-5">
+        <form action="/admin/update_education_management" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background heading">
+                <h3 class="text-dark" style="font-weight: 600;">Best Education</h3>
+            </div>
+              <div class="col-md-6">
+                Education Name
+                <input type="text" name="education_name" class="form-control" value="<%=edu_manag_qty.education_name%>" required>
+            </div>
+                <div class="col-md-5">
+                Image
+                    <input type="file" name="education_img" accept="image/*" class="form-control">
+                </div>
+                <div class="col-md-1">
+                  <img src="/admin/uploads/<%=edu_manag_qty.education_img%>" height="100%" width="100%">
+              </div>
+                <div class="col-md-12">
+                 Description
+                  <input type="text" name="education_des" class="form-control" value="<%=edu_manag_qty.education_des%>" required>
+              </div>
+              <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background">
+                <h1 class="text-dark" style="font-weight: 600;">Top Management</h1>
+            </div>
+            <div class="col-md-6">
+              Management Name
+              <input type="text" name="management_name" class="form-control" value="<%=edu_manag_qty.management_name%>" required>
+          </div>
+              <div class="col-md-5">
+              Image
+                  <input type="file" name="management_img" accept="image/*" class="form-control">
+              </div>
+              <div class="col-md-1">
+                <img src="/admin/uploads/<%=edu_manag_qty.management_img%>" height="100%" width="100%">
+            </div>
+              <div class="col-md-12">
+               Description
+                <input type="text" name="management_des" class="form-control" value="<%=edu_manag_qty.management_des%>" required>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background">
+              <h1 class="text-dark" style="font-weight: 600;">Quality Meeting</h1>
+          </div>
+          <div class="col-md-6">
+            Quality Meeting Name
+            <input type="text" name="qty_name" class="form-control" value="<%=edu_manag_qty.qty_name%>" required>
+        </div>
+            <div class="col-md-5">
+            Image
+                <input type="file" name="qty_img" accept="image/*" class="form-control">
+            </div>
+            <div class="col-md-1">
+              <img src="/admin/uploads/<%=edu_manag_qty.qty_img%>" height="100%" width="100%">
+          </div>
+            <div class="col-md-12">
+             Description
+              <input type="text" name="qty_des" class="form-control" value="<%=edu_manag_qty.qty_des%>" required>
+          </div>
+              <div class="col-md-12 d-flex justify-content-center mt-4">
+                  <button class="btn btn-success">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<%- include("footer.ejs") %>

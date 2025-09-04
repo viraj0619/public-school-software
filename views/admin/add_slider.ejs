@@ -1,0 +1,60 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background heading">
+            <h3 class="text-dark" style="font-weight: 600;">Add Hero Slider</h3>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/add_hero_slider" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-md-6">
+                Slider Name
+                <input type="text" name="slider_name" class="form-control" value="" required>
+            </div>
+                <div class="col-md-6">
+                    Slider Background Image
+                    <input type="file" name="slider_img" accept="image/*" class="form-control" required>
+                </div>
+               
+                <div class="col-md-12">
+                  Slider Description
+                  <input type="text" name="slider_des" class="form-control" value="" required>
+              </div>
+              <div class="col-md-12 d-flex justify-content-center mt-4">
+                  <button class="btn btn-success">Add Slider</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<table class="table table-success table-striped table-bordered mt-4">
+  <tr>
+      <th>Action</th>
+      <th>SrNO</th>
+      <th>Slider Name</th>
+      <th>Slider Description</th>
+      <th>Slider Image</th>   
+  </tr>
+  <%for(var i=0;i<hero_slider_info.length;i++) {%>
+  <tr>
+    <td>
+      <a href="/admin/edit_hero_slider_info/<%=hero_slider_info[i].hero_slider_id %>">
+        <i class="fa fa-edit text-success fs-4" style="float: left;"></i>
+      </a>
+      <a href="/admin/delete_hero_slider_info/<%=hero_slider_info[i].hero_slider_id %>" onclick="return confirm('Are You Sure?')">
+        <i class="fa fa-trash text-danger fs-4"></i>
+      </a>
+    </td>   
+     <td><%=i+1%></td>
+    <td><%=hero_slider_info[i].slider_name%></td>
+    <td><%=hero_slider_info[i].slider_des%></td>
+
+    <td>
+      <img src="/admin/uploads/<%=hero_slider_info[i].slider_img%>" height="100px " width="100px">
+    </td>
+</tr>
+<%}%></table>
+
+<%- include("footer.ejs") %>

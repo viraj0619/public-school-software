@@ -1,0 +1,65 @@
+<%-include("navbar.ejs")%>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="">
+                <h3 class="heading">Alumini
+                    <a href="./add_alumini">
+                        <button class="text-end border-5" type="submit" title="Add New Department" ><i class="fa fa-plus"></i></button>
+                    </a>
+                </h3>
+               
+            </div>  
+          
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-primary table-stripped" >
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Action</th>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>Std</th>
+                    <th>Percent</th>
+                </tr>
+
+            <%  alumini.map((val , index)=>{  %>
+                
+
+                <tr>
+                    <td><%= index + 1 %></td>
+                    <td>
+                        <a href="/admin/edit_alumini?alumini_id=<%=val.alumini_id%>">
+                            <button class="btn btn-outline-success"><i class="fa fa-pencil"></i></button>
+                        </a>
+                        <a href="/admin/delete_alumini?alumini_id=<%=val.alumini_id%>">
+                            <button class="btn btn-outline-danger"><i class="fa fa-trash"></i></button>
+                        </a>
+                    </td>
+                    <td>
+                        <img src="/uploads/<%=val.alumini_img%>" alt="" height="100px" width="150px">
+                    </td>
+                    <td><%=val.alumini_name%></td>
+                    <td><%=val.alumini_std%></td>
+                    <td><%=val.alumini_percent%></td>
+                </tr>
+
+                <%   })  %>
+
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%-include("footer.ejs")%>

@@ -1,0 +1,50 @@
+<%-include("navbar.ejs")%>
+<style>
+    .gradient-bg {
+      background-image: linear-gradient(to right, blue,darkblue, white);
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+    }
+  </style>
+<div class="container">
+    <div class="row  text-warning" >
+      <h1 class="d-flex justify-content-center gradient-bg" style="background-image: linear-gradient(70% blue, 30% darkblue , 40% white);">Show Teachers Lists</h1>
+    </div>
+
+    <div class="row">
+        <table class="table table-success table-striped table-bordered">
+            <tr>
+                <th>SRNO</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Class</th>
+                <th>Identity</th>
+                <th>Image </th>
+                <th>Signature</th>
+                <th>Address</th>
+            </tr>
+            <%for(var i =0 ; i<teachers.length; i++ ) { %>
+            <tr>
+                <td style="width: 1%;"><%=i+1%></td>
+                <td style="width: 7%;"><%=teachers[i].teacher_name%></td>
+                <td style="width: 4%;"><%=teachers[i].teacher_phone%></td>
+                <td style="width: 4%;"><%=teachers[i].teacher_email%></td>
+                <td style="width: 5%; font-weight: 500;" ><%=teachers[i].teacher_class%></td>
+                <td style="width: 4%;"><%=teachers[i].teacher_identity%></td>
+                <td style="width: 6%;"><%=teachers[i].teacher_address%></h1></td>
+                <td style="width: 2%; text-align: center;">
+                    <img src="/admin/uploads/<%=teachers[i].teacher_photo%>" alt="" style="width: 80px; height: 60px; border-radius: 10%;">
+                </td>
+                <td style="width: 3%; text-align: center;">
+                    <img src="/admin/uploads/<%=teachers[i].teacher_signatures%>" style="width: 100px;">
+                </td>
+
+            </tr>
+            <% } %>
+        </table>
+    </div>
+</div>
+
+<%-include("footer.ejs")%>

@@ -1,0 +1,391 @@
+<%-include("navbar.ejs")%>
+<!-- popup form -->
+
+<div class="container">
+    <div class="row">
+        <div id="alert-box" class="sticky-top"></div>
+        <div class="col-md-12">
+            <section>
+                <div class="container4">
+                   
+                </div>
+                    <div>
+                        <div class="row bg-light" style="display: flex; justify-content: center;">
+                            <form action="/payment" method="post" class="row g-2 p-3"  >
+                                <div class="my-md-3 col-md-12 text-center">
+                                    <label for="acaye">
+                                        <div class="mb-4">
+                                    <span class="fw-bold text-dark alt fs-4">Admission Form </span>
+                                      <select class="required d-inline-block" name="aca_year" id="acaye">
+                                        <option value="2024-2025" selected>2024-2025</option>
+                                        <option value="2023-2024">2023-2024</option>
+                                        <option value="2022-2023">2022-2023</option>
+                                    </select> 
+                                </div>
+                                    
+                                </label>
+                               
+                                </div>
+                                <input type="hidden" name="stud_class" value="<%=stud_class%>" id="">
+                                <input type="hidden" name="student_id" value="<%=admission.student_id%>" >
+
+                                
+                               
+                                <div class="my-md-3  col-md-4">
+                                    <label for="validationDefault01" class="form-label lablefs text-dark">First Name</label>
+                                    <input required type="text" class="form-control alt" id="validationDefault01"
+                                        placeholder=" First " name="admfull_first" >
+                                </div>
+                                <div class="my-md-3  col-md-4">
+                                    <label for="validationDefault01" class="form-label lablefs text-dark">Middle Name</label>
+                                    <input required type="text" class="form-control alt" id="validationDefault01"
+                                        placeholder=" Middle " name="admfull_middle" >
+                                </div>
+                                <div class="my-md-3  col-md-4">
+                                    <label for="validationDefault01" class="form-label lablefs text-dark">Last Name</label>
+                                    <input required type="text" class="form-control alt" id="validationDefault01"
+                                        placeholder=" Last " name="admfull_last" >
+                                </div>
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault02" class="form-label lablefs text-dark">Mobile</label>
+                                    <input required type="number" class="form-control alt" id="validationDefault02" placeholder="Enter Mobile"
+                                       name="admfull_mobile"  value="<%=userName[0].std_mobile%>" >
+                                </div>
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault03" class="form-label lablefs text-dark">Email</label>
+                                    <input required type="email" class="form-control alt" id="validationDefault03" placeholder="Enter Email"
+                                      name="admfull_email" value="<%=userName[0].std_email%>" >
+                                </div>
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault04" class="form-label lablefs text-dark">Aadhar Number</label>
+                                    <input required type="number" class="form-control alt" id="validationDefault04" placeholder="Enter Aadhar No"
+                                      name="admfull_aadhar_no"  >
+                                </div>
+
+                                <div class="my-md-3 col-12 col-md-12">
+                                    <label for="InsertRecordPresentAddress" class="form-label lablefs text-dark">Local Address</label>
+                                    <textarea class="form-control alt" required rows="4" id="InsertRecordPresentAddress" placeholder="Enter Your Address" name="adm_localaddress"></textarea>
+                                  </div>
+                                  
+                                  <div class="form-check mb-3">
+                                    <input type="checkbox" name="" id="chkBox">
+                                    <label for="chkBox" class="form-label lablefs text-dark">Same as Local Address</label>
+                                  </div> 
+                                  
+                                  <div class="my-md-3 col-12 col-md-12">
+                                    <label for="EditRecordPermanentAddress" class="form-label lablefs text-dark">Permanent Address</label>
+                                    <textarea class="form-control alt" required rows="4" id="EditRecordPermanentAddress" placeholder="Enter Your Address" name="adm_permentaddress"></textarea>
+                                  </div>
+                               
+            
+                                  <div class="my-md-3 col-6 col-md-3">
+                                    <label for="country" class="form-label lablefs text-dark">Country</label>
+                                    <select class="form-select py-2 alt country" required id="country" name="adm_country" onchange="loadStates()">
+                                        <option selected>---Choose Country---</option>
+
+                                    </select>
+                                </div>
+                                
+                                <div class="my-md-3 col-6 col-md-3">
+                                    <label for="state" class="form-label lablefs text-dark">State</label>
+                                    <select class="form-select py-2 alt state" required id="state" name="adm_state" onchange="loadCities()">
+                                        <option selected>---Choose State---</option>
+
+                                    </select>
+                                </div>
+                                
+                                <div class="my-md-3 col-6 col-md-3">
+                                    <label for="city" class="form-label lablefs text-dark">District</label>
+                                    <select class="form-select py-2 alt city" required id="city" name="adm_city">
+                                      <option selected >---Choose District---</option>
+                                    </select>
+                                  </div>
+                                
+                                <div class="my-md-3 col-6 col-md-3">
+                                    <label for="village" class="form-label lablefs text-dark">Village</label>
+                                        <input required type="text" class="form-control alt" id="validationDefault02" placeholder="Enter Village Name"
+                                       name="adm_village" >
+                                </div>
+                                
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="pincodee" class="form-label lablefs text-dark">Pincode</label>
+                                    <input type="number" name="adm_pincode" id="pincodee" class="form-control" >
+                                </div>
+                                
+            
+                                <div class="my-md-3 col-6 col-md-4 ">
+                                    <label for="validationDefault03" class="form-label lablefs text-dark">Gender</label><br>
+                                    <input required class="form-check-input alt" type="radio" name="gender" value="male" id="flexRadioDefault1">
+                                    <label class="form-check-label text-secondary lablefs text-dark" for="flexRadioDefault1">
+                                        Male
+                                    </label>
+                                    <input required class="form-check-input ms-md-4 alt" type="radio" name="gender" value="female"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label text-secondary lablefs text-dark" for="flexRadioDefault2">
+                                        Female
+                                    </label>
+                                </div>
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault04" class="form-label lablefs text-dark">Blood Group</label>
+                                    <select class="form-select py-2 alt" required id="validationDefault04" name="adm_bloodg" >
+                                        <option class="h5" selected disabled >
+                                            <h5>---Choose---</h5>
+                                        </option>
+                                        <option value="A+">A+</option>
+                                        <option value="B+">B+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                            
+                                    </select>
+                                </div>
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault03" class="form-label lablefs text-dark">Birth Date</label><br>
+                                    <input required class="form-control alt" type="date" name="adm_birth_date" >
+                                </div>
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault03" class="form-label lablefs text-dark">Birth Place</label><br>
+                                    <input required class="form-control alt" type="text" name="adm_birht_place" placeholder="BirthPlace" >
+                                </div>
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault04" class="form-label lablefs text-dark">previous Class</label>
+                                    <select class="form-select py-2 alt" required id="validationDefault04 " name="adm_prev_class" >
+                                        <option class="h5" selected disabled value="">
+                                            <h5>---Choose Class---</h5>
+                                        </option>
+                                        <option value="1st">1<sup>st</sup></option>
+                                            <option value="2nd" class="h5">2<sup>nd</sup></option>
+                                            <option value="3rd" class="h5">3<sup>rd</sup></option>
+                                            <option value="4th" class="h5">4<sup>th</sup></option>
+                                            <option value="5th" class="h5">5<sup>th</sup></option>
+                                            <option value="6th" class="h5">6<sup>th</sup></option>
+                                            <option value="7th" class="h5">7<sup>th</sup></option>
+                                            <option value="8th" class="h5">8<sup>th</sup></option>
+                                            <option value="9th" class="h5">9<sup>th</sup></option>
+                                            <option value="10th" class="h5">10<sup>th</sup></option>
+                                            <option value="11th" class="h5">11<sup>th</sup></option>
+                                    </select>
+                                </div>
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault02" class="form-label lablefs text-dark">Last Year Percent (%)</label>
+                                    <input required type="number" class="form-control alt" id="validationDefault02" placeholder="Enter percent "
+                                      name="adm_lastyear_percent"  value="%">
+                                </div>
+                                
+                                
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault04" class="form-label lablefs text-dark">Religion</label>
+                                    <select class="form-select py-2 alt" required id="validationDefault04" name="adm_religion">
+                                        <option class="h5" selected disabled value="">
+                                            <h5>---Select Religion---</h5>
+                                        </option>
+                                            <option class="h5" value="hinduism">Hinduism</option>
+                                            <option class="h5" value="muslim">Muslim</option>
+                                            <option class="h5" value="christian">Christian</option>
+                                            <option class="h5" value="sikh">Sikh</option>
+                                            <option class="h5" value="buddhist">Buddhist </option>
+                                            <option class="h5" value="parsi">Parsi</option>
+                                            
+                                    </select>
+                                </div>
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault04" class="form-label lablefs text-dark">Caste Category</label>
+                                    <select class="form-select py-2 alt" required id="validationDefault04" name="adm_cat_caste">
+                                        <option class="h5" selected disabled value="">
+                                            <h5>---Select Caste Category---</h5>
+                                        </option>
+                                            <option class="h5" value="general">General</option>
+                                            <option class="h5" value="obc">OBC</option>
+                                            <option class="h5" value="nt">NT</option>
+                                            <option class="h5" value="sc">SC</option>
+                                            <option class="h5" value="st">ST</option>
+
+                                    </select>
+                                </div>
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault04" class="form-label lablefs text-dark"> Caste</label>
+                                    <select class="form-select py-2 alt" required id="validationDefault04" name="adm_caste" >
+                                        <option class="h5" selected disabled value="">
+                                            <h5>---Select Caste---</h5>
+                                        </option>
+                                            <option class="h5" value="maratha">Maratha</option>
+                                            <option class="h5" value="kunbi-maratha">Kunbi-Maratha</option>
+                                            
+                                    </select>
+                                </div>
+                                <div class="my-md-3 col-6 col-md-4">
+                                    <label for="validationDefault04" class="form-label lablefs text-dark">Minority</label>
+                                    <select class="form-select py-2 alt" required id="validationDefault04" name="adm_minority" >
+                                        <option class="h5" selected  value="">
+                                            <h5>---Select Minority---</h5>
+                                        </option>
+                                        <option class="h5" value="muslim">Muslim</option>
+                                        <option class="h5" value="christian">Christian</option>
+                                        <option class="h5" value="sikh">Sikh</option>
+                                        <option class="h5" value="buddhist">Buddhist </option>
+                                        <option class="h5" value="parsi">Parsi</option>
+                                        <option class="h5" value="none">None</option>
+                                           
+                                    </select>
+                                </div>
+                                <div class="">
+                                    <input type="hidden" name="adm_approval" id="" value="pending">
+                                </div>
+                                <div class="col-md-12 col-6" style="display: flex; justify-content: center;">
+                                    <div class="form-check">
+                                        <input required class="form-check-input" type="checkbox" value="" id="invalidCheck2">
+                                        <label class="form-check-label ms-2 text-dark" for="invalidCheck2">
+                                            I agree to the terms and conditions
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-6 text-center">
+                                    <button class="btn btn-primary btn-sm" type="submit">Submit form</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $(document).keydown(function(event) {
+        if (event.ctrlKey==true && (event.which == '118' || event.which == '86')) {
+            var alertBox = $('<div class="alert alert-danger" role="alert">'+
+                              'Don\'t Copy Paste!'+
+                              '<a href="#" class="alert-link"> Ctrl C / Ctrl V Not Allowed </a>'+
+                            '</div>');
+            $('#alert-box').html(alertBox);
+            setTimeout(function() {
+                alertBox.fadeOut(500);
+            }, 5000);
+            event.preventDefault();
+         }
+    });
+});
+</script>
+
+<script>
+    const presentAddr = document.getElementById('InsertRecordPresentAddress');
+    const permaAddr = document.getElementById("EditRecordPermanentAddress");
+    const chkBox = document.getElementById("chkBox");
+    let originalPermaAddr = permaAddr.value;
+
+    function formatAddress(address) {
+        return address.replace(/\r\n/g, ' ').trim();
+    }
+
+    chkBox.addEventListener('change', function() {
+        if (chkBox.checked) {
+            permaAddr.value = formatAddress(presentAddr.value);
+        } else {
+            permaAddr.value = originalPermaAddr;
+        }
+    });
+
+    presentAddr.addEventListener('input', function() {
+        if (chkBox.checked) {
+            permaAddr.value = formatAddress(presentAddr.value);
+        }
+    });
+
+    // Save formatted addresses before form submission
+    document.querySelector('form').addEventListener('submit', function(e) {
+        presentAddr.value = formatAddress(presentAddr.value);
+        permaAddr.value = formatAddress(permaAddr.value);
+        originalPermaAddr = formatAddress(originalPermaAddr);
+    });
+</script>
+                                                            
+<script>
+    var config = {
+        cUrl :'https://api.countrystatecity.in/v1/countries',
+        cKey :'VFFKalZDMjVrZE9IVTdLNDk0aGJUM0U2c00wc1JwczZxT2ROT1VucQ=='
+
+                }
+
+       
+    var countrySelect = document.querySelector('.country'),
+
+            countryState = document.querySelector('.state'),
+            countryCity = document.querySelector('.city')
+
+         
+
+       function loadCountries() {
+
+                    let  apiEndPoint = config.cUrl
+
+                    fetch(apiEndPoint, { headers : {"X-CSCAPI-KEY":config.cKey}})
+                    .then(Response => Response.json())
+                    .then(data => {
+                        console.log(data);
+ 
+                        data.forEach(country => {
+                            
+                            const option = document.createElement('option')
+                            option.value = country.iso2
+                            option.textContent = country.name
+                            countrySelect.appendChild(option)
+
+                        });
+
+                    }).catch(error => console.error('Error Loading countries',error))
+
+       }
+
+       function loadStates() {
+            const selectCountryCode = countrySelect.value
+            console.log(selectCountryCode)
+
+            countryState.innerHTML = '<option value="">Select State</option>'
+
+            fetch(`${config.cUrl}/${selectCountryCode}/states`,{ headers : {"X-CSCAPI-KEY":config.cKey}})
+            .then(response => response.json())
+            .then(data => {
+                        // console.log(data)
+                      data.forEach(state => {
+                        const option = document.createElement('option')
+                            option.value = state.iso2   
+                            option.textContent = state.name
+                            countryState.appendChild(option)
+                      })
+
+                    }).catch(error => console.error('Error Loading States',error))
+                }
+                
+                function loadCities() {
+                    const selectCountryCode = countrySelect.value
+                    const selectStateCode = countryState.value
+
+                    countryCity.innerHTML = '<option value="">Select City</option>'
+                    fetch(`${config.cUrl}/${selectCountryCode}/states/${selectStateCode}/cities`,{ headers : {"X-CSCAPI-KEY":config.cKey}})
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data)
+
+                        data.forEach(city => {
+                            const option = document.createElement('option')
+                                option.value = city.name
+                                option.textContent = city.name
+                                countryCity.appendChild(option)
+                        })
+                        
+
+                        }).catch(error => console.error('Error Loading States',error))
+                    }
+
+       window.onload = loadCountries    
+
+
+
+</script>
+
+
+<%-include("footer.ejs")%>

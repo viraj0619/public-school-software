@@ -1,0 +1,147 @@
+<footer class="mt-5" style="background-color: #0E3A57;">
+    <div class="container pt-5 pb-5">
+      <div class="row">
+        <div class="col-lg-3 col-sm-12 mt-3">
+          <h3 class="text-white mb-3" style="font-weight: 400;">Contact Information</h3>
+          <ul type="none" class="p-0">
+            <li class="mt-3">
+              <div class="row">
+                <div class="col-2">
+                  <i class="fa-solid pt-2 fa-envelope text-white" style="font-size: 18px;"></i>
+                </div>
+                <div class="col-9">
+                  <span class="text-white" style="font-size:18px;">
+                    <%=social_info.school_email%>
+                  </span>
+                </div>
+              </div>
+            </li>
+
+            <li class="mt-3">
+              <div class="row">
+                <div class="col-2">
+                  <i class="fa-solid pt-2 fa-phone-volume text-white" style="font-size: 18px;"></i>
+                </div>
+                <div class="col-9">
+                  <span class="text-white" style="font-size: 18px;">
+                    +91 <%=social_info.school_contact%>
+                  </span>
+                </div>
+              </div>
+            </li>
+
+
+            <li class="mt-3">
+              <div class="row">
+                <div class="col-2">
+                  <i class="fa-solid pt-2 fa-clock text-white" style="font-size: 18px;"></i>
+                </div>
+                <div class="col-10">
+                  <span class="text-white" style="font-size: 16px;">
+                    <%=social_info.school_time%>
+                  </span>
+                </div>
+              </div>
+            </li>
+
+
+            <li class="mt-3">
+              <div class="row">
+                <div class="col-2">
+                  <i class="fa-solid fa-chart-area pt-2 text-white" style="font-size: 18px;"></i>
+                </div>
+                <div class="col-9">
+                  <span class="text-white" style="font-size: 16px;">
+                    <%=social_info.school_address%>
+                  </span>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-12 mt-3">
+          <h3 class="text-white mb-3" style="font-weight: 400;">Important Links</h3>
+          <div class="row">
+            <div class="col-6 ">
+            <ul type="none" class="p-0">
+             <a href="<%=important_links_info.School_ERP_link%>"><li class="text-white p-1" style="font-size: 16px;">School ERP</li></a>
+                  <a href="<%=important_links_info.College_ERP_link%>"><li class="text-white p-1" style="font-size: 16px;">College ERP</li></a>
+                    <a href="<%=important_links_info.University_ERP_link%>"><li class="text-white p-1" style="font-size: 16px;">University ERP</li></a>
+                      <a href="<%=important_links_info.Learning_Management_link%>"><li class="text-white p-1" style="font-size: 16px;">Learning Management System</li></a>
+                        <a href="<%=important_links_info.Marketing_Services_link%>"><li class="text-white p-1" style="font-size: 16px;">Marketing Services</li></a>
+                          <a href="<%=important_links_info.FAQ_link%>"><li class="text-white p-1" style="font-size: 16px;">FAQ</li></a>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul type="none" class="p-0">
+               <a href="<%=important_links_info.Career_link%>"> <li class="text-white p-1" style="font-size: 16px;">Career</li></a>
+               <a href="<%=important_links_info.Teachers_Login%>"> <li class="text-white p-1" style="font-size: 16px;">Teachers Login</li></a>
+               <a href="<%=important_links_info.Become_Partner_link%>"> <li class="text-white p-1" style="font-size: 16px;">Become A Partner</li></a>
+               <a href="<%=important_links_info.About_Us_link%>"> <li class="text-white p-1" style="font-size: 16px;">About Us</li></a>
+               <a href="<%=important_links_info.Testimonials_link%>"> <li class="text-white p-1" style="font-size: 16px;">Testimonials</li></a>
+               <a href="<%=important_links_info.Privacy_Policy_link%>"> <li class="text-white p-1" style="font-size: 16px;">Privacy Policy</li></a>
+               <a href="<%=important_links_info.Terms_Conditions_link%>"> <li class="text-white p-1" style="font-size: 16px;">Terms and Conditions</li></a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-sm-12 mt-3">
+          <h3 class="text-white" style="font-weight: 400;">Download Our App</h3>
+          <ul class="p-0" type="none">
+            <li class="d-flex mt-3">
+              <button class="text-white px-4 ps-4 pt-2 pb-2"
+                style="background-color: transparent;border: 2px solid white;border-radius: 4px;">
+                <i class="fa-brands fa-google-play"></i> Playstore
+              </button>
+              <button class="text-white px-4 ps-4 pt-2 pb-2 button_seco mx-4"
+                style="background-color: transparent;border: 2px solid white;border-radius: 4px;">
+                <i class="fa-brands fa-apple" style="font-size: 20px;"></i> App Store
+              </button>
+            </li>
+            <li>
+              <h4 class="text-white pt-4" style="font-weight: 400;">Social Media</h4>
+
+            </li>
+            <li class="d-flex mt-3">
+              
+              <a href="<%=social_info.facebook_link	%>" style="text-decoration: none; margin-right: 20px;">
+                <button
+                  style="background-color: transparent;color:white;padding: 5px 10px;border: 2px solid white;border-radius: 5px; ">
+                  <i class="fa-brands fa-facebook"></i> </button>
+              </a>
+              <a href="<%=social_info.linkedin_link	%>" style="text-decoration: none; margin-right: 20px;">
+                <button
+                  style="background-color: transparent;color:white;padding: 5px 10px;border: 2px solid white;border-radius: 5px; ">
+                  <i class="fa-brands fa-linkedin"></i> </button>
+              </a>
+              <a href="<%=social_info.insta_link	%>" style="text-decoration: none; margin-right: 20px;">
+                <button
+                  style="background-color: transparent;color:white;padding: 5px 10px;border: 2px solid white;border-radius: 5px; ">
+                  <i class="fa-brands fa-instagram"></i> </button>
+              </a>
+              <a href="<%=social_info.youtube_link	%>" style="text-decoration: none; margin-right: 20px;">
+                <button
+                  style="background-color: transparent;color:white;padding: 5px 10px;border: 2px solid white;border-radius: 5px; ">
+                  <i class="fa-brands fa-youtube"></i> </button>
+              </a>
+              <a href="<%=social_info.twiter_link	%>" style="text-decoration: none; margin-right: 20px;">
+                <button
+                  style="background-color: transparent;color:white;padding: 5px 10px;border: 2px solid white;border-radius: 5px; ">
+                  <i class="fa-brands fa-twitter"></i> </button>
+              </a>
+            </li>
+
+            <li class="mt-3 logos_img">
+              <img src="https://www.clipartbest.com/cliparts/RTG/Ekr/RTGEkrogc.png" height="140px"
+                width="40%" />
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

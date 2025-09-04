@@ -1,0 +1,72 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background heading">
+            <h3 class="text-dark" style="font-weight: 600;">Update Principal Message</h3>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/update_principal_message" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-3">
+                    Upload Principal Image
+                    <input type="file" name="principal_photo" accept="image/*" class="form-control">
+                </div>
+                <div class="col-md-1">
+                  <img src="/admin/uploads/<%=principal_info.principal_photo%>" height="100%" width="100%">
+              
+              </div>
+                <div class="col-md-4">
+                    Principal Name
+                    <input type="text" name="principal_name" class="form-control" value="<%=principal_info.principal_name%>" required>
+                </div>
+                <div class="col-md-4">
+                  post
+                  <input type="text" name="principal_post" required class="form-control" value="<%=principal_info.principal_post%>">
+              </div>
+                <div class="col-md-12">
+                    Enter Sub Title1
+                    <textarea class="form-control" required name="principal_par1"><%=principal_info.principal_par1%></textarea>
+                </div>
+                <div class="col-md-12">
+                  Enter Sub Title2
+                  <textarea class="form-control" required name="principal_par2"><%=principal_info.principal_par2%></textarea>
+              </div>
+              <div class="col-md-12">
+                Enter Sub Title3
+                <textarea class="form-control" required name="principal_par3"><%=principal_info.principal_par3%></textarea>
+            </div>
+               
+                <div class="col-md-12 d-flex justify-content-center mt-4">
+                    <button class="btn btn-success">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table table-success table-striped table-bordered mt-4">
+    <tr>
+        <th>SrNO</th>
+        <th>Name</th>
+        <th>Post</th>
+        <th>Sub Title1</th>
+        <th>Sub Title2</th>
+        <th>Sub Title3</th>
+        <th>Photo</th>
+    </tr>
+    <tr>
+      <td>1.</td>
+      <td><%=principal_info.principal_name%></td>
+      <td><%=principal_info.principal_post%></td>
+      <td><%=principal_info.principal_par1%></td>
+      <td><%=principal_info.principal_par2%></td>
+      <td><%=principal_info.principal_par3%></td>
+      <td>
+        <img src="/admin/uploads/<%=principal_info.principal_photo%>" style="height: 100px; width: 100px;">
+       </td>
+    
+  </tr></table>
+
+<%- include("footer.ejs") %>

@@ -1,0 +1,135 @@
+
+
+.header1 {
+    display: block;
+    padding: 20px 20px 10px 10px;
+}
+.header1 ul li {
+    list-style: none;
+    display: inline;
+    /* margin: 10px; */
+}
+
+.header1 ul li a {
+    text-decoration: none;
+}
+
+.header1 ul li a {
+    text-decoration: none;
+}
+
+
+.header1 ul li>a {
+    background-color: #2446A2;
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    padding-left: 5px;
+    transition: background-color 0.7s;
+    color: white;
+}
+
+
+
+.header1 ul li >a:hover {
+    background-color: white;
+    padding:5px;
+    border-radius: 50%;
+    text-align: center;
+    padding-left: 5px;
+    color: #2446A2;
+    box-shadow: 0px 0px 2px black;
+}
+
+
+
+
+@media(max-width:800px) {
+    .header1 {
+        display: none;
+    }
+}
+
+/* -----Navbar---- */
+
+.navbar {
+    height: 70px  !important;
+}
+
+.collapse .navbar-nav {
+    margin-left: 18% !important ;
+}
+
+.collapse .navbar-nav .nav-item {
+    padding-left: 20px !important;
+}
+
+.collapse .navbar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px  !important;
+    display: inline-block  !important;
+    text-align: center  !important;
+    padding: 0 20px  ;
+    line-height: 50px;
+
+}
+
+.collapse .navbar-nav a:hover {
+    color: #4e16da;
+}
+
+.hover-line::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px  !important;
+    background-color: #34ff0c;
+    transition: all .6s ease 0s;
+    transition: width .3;
+
+}
+
+.hover-line:hover::after {
+    width: 100%  !important;
+    transition: width .34s  !important;
+}
+
+
+
+@media(max-width:900px) {
+    .collapse .navbar-nav {
+        margin-left: 0px !important;
+        padding: 0px  !important;
+    }
+
+    .navbar {
+        height: auto  !important;
+    }
+}
+
+.loginn{
+    display: inline-block;
+}
+.loginn p {
+    position: relative;
+    left: 50px;
+    background-image: linear-gradient(50deg, 
+    #007bff 0%, #007bff 20px, 
+    #ffffff 20px, #ffffff 30px, 
+    #007bff 30px, #007bff 30px, 
+    #ffffff 50px, #007bff 70px);}
+
+.logout{
+    display: inline-block;
+    margin-left: -20px;
+}
+
+.loginame{
+    display:inline-block;
+}
+.loginame  {
+    position: relative;
+    left: auto;
+    bottom:auto;
+}

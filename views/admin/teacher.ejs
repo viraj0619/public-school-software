@@ -1,0 +1,80 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background heading">
+            <h3 class="text-dark" style="font-weight: 600;">Add Teacher</h3>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/add_teacher" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-4">
+                    Upload Teacher Photo
+                    <input type="file" required name="teacher_photo" accept="image/*" class="form-control">
+                </div>
+                <div class="col-md-4">
+                   Teacher Name
+                    <input type="text" name="teacher_name" class="form-control" value="" required>
+                </div>
+                <div class="col-md-4">
+                  Teacher Qualification
+                   <input type="text" name="teacher_qul" class="form-control" value="" required>
+               </div>
+                <div class="col-md-4">
+                  Teacher Id
+                   <input type="text" name="teacher_id" class="form-control" value="" required>
+               </div><div class="col-md-4">
+                Teacher Mobile
+                 <input type="tel" name="teacher_mobile" class="form-control" value="" required>
+             </div><div class="col-md-4">
+              Teacher Email
+               <input type="email" name="teacher_email" class="form-control" value="" required>
+           </div>
+                <div class="col-md-12 d-flex justify-content-center mt-4">
+                    <button class="btn btn-success">Add Teacher</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table table-success table-striped table-bordered mt-4">
+  <tr>
+      <th>Action</th>
+      <th>SrNO</th>
+      <th>Name</th>
+      <th>Post</th>
+      <th>ID</th>
+      <th>Mobile NO</th>
+      <th>Email</th>
+      <th>Photo</th>
+
+
+      
+  </tr>
+  <%for(var i=0;i<teacher_info.length;i++) {%>
+  <tr>
+    <td>
+      <a href="/admin/edit_teacher_info/<%= teacher_info[i].teacher_info_id%>">
+        <i class="fa fa-edit text-success fs-3"></i>
+      </a>
+      <a href="/admin/delete_teacher_info/<%= teacher_info[i].teacher_info_id%>" onclick="return confirm('Are You Sure?')">
+        <i class="fa fa-trash text-danger fs-3"></i>
+      </a>
+    </td>  
+      <td><%=i+1%></td>
+    <td><%=teacher_info[i].teacher_name%></td>
+    <td><%=teacher_info[i].teacher_qul%></td>
+    <td><%=teacher_info[i].teacher_id%></td>
+    <td><%=teacher_info[i].teacher_mobile%></td>
+    <td><%=teacher_info[i].teacher_email%></td>
+    <td>
+      <img src="/admin/uploads/<%=teacher_info[i].teacher_photo%>" height="100px " width="100px">
+      </td>
+</tr>
+<%}%>
+
+</table>
+
+<%- include("footer.ejs") %>

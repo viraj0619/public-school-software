@@ -1,0 +1,153 @@
+<%-include('navbar.ejs')%>
+
+<section class="page-title bg-1">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block text-center">
+            <span class="text-white">Contact Us</span>
+            <h1 class="text-capitalize mb-5 text-lg text-white">Get in Touch</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<section id="contact-us" class="contact-us section mt-5">
+<div class="container">
+        <div class="contact-head">
+            <div class="row">
+                <div class="col-lg-8 col-12">
+                    <div class="form-main" >
+                        <div class="title">
+                            <h4>Get in touch</h4>
+                            <h2>Write us a message</h2>
+                        </div>
+                       
+                        <form class="form" action="contact_form" method="post" >
+                            <input type="hidden" name="current_date" id="" >
+
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <label>Your full Name<span>*</span></label>
+                                        <input name="name" type="text" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <label>Your Subjects<span>*</span></label>
+                                        <input name="subject" type="text" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <label>Your Email<span>*</span></label>
+                                        <input name="email" type="email" placeholder="">
+                                    </div>	
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <label>Your Phone<span>*</span></label>
+                                        <input name="mobile_no" type="number" placeholder="">
+                                    </div>	
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group message">    
+                                        <label>your message<span>*</span></label>
+                                        <textarea name="message" placeholder=""></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="form-group button mt-2">
+                                        <button type="submit">
+                                            <div class="svg-wrapper-1">
+                                              <div class="svg-wrapper">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                                  <path fill="none" d="M0 0h24v24H0z"></path>
+                                                  <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                            <span >Send</span>
+                                          </button>   
+                                        </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 ">
+                    <div class="single-head">
+                        <div class="single-info">
+                            <i class="fa fa-phone"></i>
+                            <h4 class="title">Call us Now:</h4>
+                            <ul>
+                                <li>+91 <%=contacts.first_con_no%> </li>
+                                <li>+91 <%=contacts.sec_con_no%></li>
+                            </ul>
+                        </div>
+                        <div class="single-info">
+                            <i class="fa fa-envelope-open"></i>
+                            <h4 class="title">Email:</h4>
+                            <ul>
+                                <li><a href="mailto:info@yourwebsite.com"><%=contacts.fir_mail_id%></a></li>
+                                <li><a href="mailto:info@yourwebsite.com"><%=contacts.sec_mail_id%></a></li>
+                            </ul>
+                        </div>
+                        <div class="single-info">
+                            <i class="fa fa-location-arrow"></i>
+                            <h4 class="title">Our Address:</h4>
+                            <ul>
+                                <li><%=contacts.address%></li>
+                                <li><%=contacts.address2%></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><br><br>
+
+
+<!-- -----------------map section start ---------------------------- -->
+
+<section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 p-0 shadow-lg border" >
+                <iframe src="<%=contacts.g_map_link%>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+</section><br><br>
+<!-- -----------------map section end ---------------------------- -->
+
+
+
+
+<section id="call-to-action">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="block">
+                <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO WHAT YOU THINK ?</h1>
+                <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium.</p>
+                <a href="" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact With Me</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</section><br><br><br><br><br>
+
+
+
+
+
+
+<%-include('footer.ejs')%>

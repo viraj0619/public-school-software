@@ -1,0 +1,46 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background">
+            <h1 class="text-dark" style="font-weight: 600;">Update Teacher</h1>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/update_teacher" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-3">
+                    Upload Teacher Photo
+                    <input type="file" name="teacher_photo" accept="image/*" class="form-control">
+                </div>
+                <div class="col-md-1">
+                  <img src="/admin/uploads/<%=teacher_info[0].teacher_photo%>" height="100% " width="100%">
+                </div>
+                <div class="col-md-4">
+                   Teacher Name
+                    <input type="text" name="teacher_name" class="form-control" value="<%=teacher_info[0].teacher_name%>" required>
+                    <input type="hidden" name="teacher_info_id" class="form-control" value="<%=teacher_info[0].teacher_info_id%>" required>
+
+                </div>
+                <div class="col-md-4">
+                  Teacher Qualification
+                   <input type="text" name="teacher_qul" class="form-control" value="<%=teacher_info[0].teacher_qul%>" required>
+               </div>
+                <div class="col-md-4">
+                  Teacher Id
+                   <input type="text" name="teacher_id" class="form-control" value="<%=teacher_info[0].teacher_id%>" required>
+               </div><div class="col-md-4">
+                Teacher Mobile
+                 <input type="tel" name="teacher_mobile" class="form-control" value="<%=teacher_info[0].teacher_mobile%>" required>
+             </div><div class="col-md-4">
+              Teacher Email
+               <input type="email" name="teacher_email" class="form-control" value="<%=teacher_info[0].teacher_email%>" required>
+           </div>
+                <div class="col-md-12 d-flex justify-content-center mt-4">
+                    <button class="btn btn-success">Update Teacher</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<%- include("footer.ejs") %>

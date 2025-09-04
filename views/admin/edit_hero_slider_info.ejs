@@ -1,0 +1,37 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background">
+            <h1 class="text-dark" style="font-weight: 600;">Update Slider</h1>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/update_hero_slider" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-md-5">
+                Slider Name
+                <input type="text" name="slider_name" class="form-control" value="<%=hero_slider_info.slider_name%>" required>
+                <input type="hidden" name="hero_slider_id" class="form-control" value="<%=hero_slider_info.hero_slider_id%>" required>
+
+            </div>
+                <div class="col-md-5">
+                    Slider Background Image
+                    <input type="file" name="slider_img" accept="image/*" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <img src="/admin/uploads/<%=hero_slider_info.slider_img%>" height="100%" width="100%">
+              </div>
+                <div class="col-md-12">
+                  Slider Description
+                  <input type="text" name="slider_des" class="form-control" value="<%=hero_slider_info.slider_des%>" required>
+              </div>
+              <div class="col-md-12 d-flex justify-content-center mt-4">
+                  <button class="btn btn-success">Update Slider</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

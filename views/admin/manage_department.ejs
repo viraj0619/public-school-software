@@ -1,0 +1,59 @@
+<%-include("navbar.ejs")%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="">
+                <h3 class="heading">Departments
+                    <a href="./ad_department">
+                        <button class="text-end border-5" type="submit" title="Add New Department" ><i class="fa fa-plus"></i></button>
+                    </a>
+                </h3>
+               
+            </div>
+          
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid mb-5">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-primary table-stripped ">
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Action</th>
+                    <th>Image</th>
+                    <th>Text</th>
+                    
+                </tr>
+                <% depart.map((val,index)=>  {   %> 
+
+                    <tr>
+                        <td class="mt-5"><%= index + 1 %></td>
+                        <td>
+                            <a href="/admin/edit_department?department_id=<%=val.department_id%>">
+                                <button class="btn btn-outline-success mt-3"><i class="fa fa-pencil"></i></button>
+                            </a>
+                            <a href="/admin/delete_department?department_id=<%=val.department_id%>">
+                                <button class="btn btn-outline-danger mt-3" onclick="return confirm('Are you Sure...!')"><i class="fa fa-trash"></i></button>
+                            </a>
+                        </td>
+                        <td>
+                            <div class="">
+                                <img src="/uploads/<%=val.department_img%>" alt="" height="100px" width="150px" class="shadow">
+
+                            </div>
+                        </td>
+                        <td><%=val.department_text%></td>
+                        
+                    </tr>
+                   
+                    <%  } ) %>
+                
+            </table>
+        </div>
+    </div>
+</div>
+<%-include("footer.ejs")%>

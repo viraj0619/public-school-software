@@ -1,0 +1,171 @@
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+
+
+
+section {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+/* sec 1 */
+
+.title1 p {
+    font-size: 17px;
+    color: black;
+    font-weight: 500;
+}
+
+.title1 p i {
+    font-size: 22px;
+    color: #2446A2;
+    font-weight: 500;
+    margin-right: 6px;
+}
+
+.title1 h2 {
+    font-size: 2.9rem;
+    color: #2446A2;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 0px 1px orange;
+}
+
+.sec1bg1 {
+    overflow: hidden;
+}
+
+.sec1bg1 img:hover {
+    transform: scale(1.1);
+    transition: 500ms ease-out;
+}
+
+/* sec 2 */
+
+.sec2head {
+    font-size: 50px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: #2446A2;
+}
+
+.cardalign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardalign i {
+    color: #2446A2;
+    font-size: 65px;
+}
+
+.cardalign h2 {
+    color: black;
+}
+
+.cardalign h5 {
+    color: gray;
+    margin-top: 10px;
+}
+
+.cardhov:hover {
+    transform: scale(1.1);
+}
+
+/* section 3 */
+
+
+.faciinfo {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.faciinfo .btn1 {
+    background-color: #2446A2;
+    color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.headcolor1 {
+    color: #2446A2;
+}
+
+.faciinfo p {
+    color: gray;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+.faciinfo h1 {
+    text-transform: capitalize;
+}
+
+.faciinfo .btn1:hover {
+    background-color: #0d225c;
+}
+
+.faciinfo .btn2 {
+    background-color: #24a224;
+    color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.headcolor2 {
+    color: #24a224;
+}
+
+.faciinfo .btn2:hover {
+    background-color: #1f5c0d;
+}
+
+.faciinfo .btn3 {
+    background-color: #a22491;
+    color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.headcolor3 {
+    color: #a22491;
+}
+
+.faciinfo .btn3:hover {
+    background-color: #5c0d48;
+}
+
+.faciinfo .btn4 {
+    background-color: #249ea2;
+    color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.headcolor4 {
+    color: #249ea2;
+}
+
+.faciinfo .btn4:hover {
+    background-color: #0d595c;
+}
+
+.imgradius {
+    border-radius: 25px;
+}
+
+.hoeffect:hover .imgradius {
+    transform: scale(1.1);
+}

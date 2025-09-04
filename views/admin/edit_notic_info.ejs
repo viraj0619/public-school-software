@@ -1,0 +1,32 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background">
+            <h1 class="text-dark" style="font-weight: 600;">Update Notice Board</h1>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/update_notic_board" method="post" class="m-4">
+            <div class="row">
+               
+                <div class="col-md-4">
+                     Title
+                    <input type="text" name="notice_title" class="form-control" value="<%=notic_info.notice_title%>" required>
+                    <input type="hidden" name="notic_board_id" class="form-control" value="<%=notic_info.notic_board_id%>" required>
+
+                </div>
+                <div class="col-md-8">
+                  Sub Title
+                  <input type="text" name="notice_subtitle" required class="form-control" value="<%=notic_info.notice_subtitle%>">
+              </div>
+                             
+                <div class="col-md-12 d-flex justify-content-center mt-4">
+                    <button class="btn btn-success">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

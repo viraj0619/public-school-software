@@ -1,0 +1,39 @@
+.main_facility .facility{
+    display: inline-flex;
+    margin-top: 60px; 
+    width: 100%;
+  }
+  
+  .main_facility .facility li{
+      margin-right:100px ;
+  }
+  
+  @media(max-width:900px)
+  {
+      
+  .main_facility .facility li{
+      margin-right:12px ;
+      font-size: 17px !important;
+  }
+  
+  }
+  
+  
+  .about{
+      display: none;
+  }
+  
+  .facility_of_js{
+      width: 70%;
+      padding-bottom: 30px;
+  }
+  
+  @media(max-width:800px)
+  {
+      
+  .facility_of_js{
+      width: 100%;
+      padding-bottom: 30px;
+  
+  }
+  }

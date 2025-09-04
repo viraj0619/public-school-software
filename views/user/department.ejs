@@ -1,0 +1,15 @@
+<%-include("navbar.ejs")%>
+
+<div class="row m-5">
+    <% depart.map((val)=> { %>
+    <div class="clm mt-2">
+        <div class="imgtext mt-2 d-flex justify-content-center">
+            <h2><%=val.department_text%></h2>
+        </div>
+        <img src="/uploads/<%=val.department_img%>" alt="Principal Office">
+    </div>
+    <% }) %>
+
+    
+
+<%-include("footer.ejs")%>

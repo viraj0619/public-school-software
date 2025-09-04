@@ -1,0 +1,38 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background heading">
+            <h3 class="text-dark" style="font-weight: 600;">Update Important Links</h3>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/update_student_feedback" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-md-12">
+                Top Description
+                <input type="text" name="top_des" class="form-control" value="<%=students_feedback_info.top_des%>">
+            </div>
+                <div class="col-md-5">
+                    Student Photo
+                    <input type="file" name="student_photo" accept="image/*" class="form-control" >
+                </div>
+                <div class="col-md-2">
+                  <img src="/admin/uploads/<%=students_feedback_info.student_photo%>" height="100%" width="100%">
+              </div>
+                <div class="col-md-5">
+                  Student Name
+                  <input type="text" name="student_name" class="form-control" value="<%=students_feedback_info.student_name%>" required>
+              </div>
+              <div class="col-md-12">
+                Student Feedback
+                <input type="text" name="student_feedback" class="form-control" value="<%=students_feedback_info.student_feedback%>" required>
+            </div>
+ <div class="col-md-12 d-flex justify-content-center mt-4">
+                  <button class="btn btn-success">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<%- include("footer.ejs") %>

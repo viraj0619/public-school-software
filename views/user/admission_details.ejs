@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Details</title>
+    <link rel="stylesheet" href="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <%- include('navbar.ejs') %>
+
+    <div class="container-fluid">
+        <!-- <h2>Admission Details</h2> -->
+        <div class="row">
+        <% if (admissionDetails.length > 0) { %>
+            <h3 class="text-dark">Current Academic Year </h3>
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <th>Sr.</th>
+                        <th>Acad. Year</th>
+                        <th>Form No</th>
+                        <th>Payment Mode</th>
+                        <th>Class</th>
+                        <th>Download Form</th>
+                        <th>Approval Status</th>
+                        <th>Admission Date</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <%  var j=0
+                     for(var i=0;i<admissionDetails.length;i++) { 
+                        j++;
+                         %>
+                        <tr>
+                            <td><%= j %></td>
+                            <td><%=admissionDetails[i].aca_year%></td>
+                            <td><%=admissionDetails[i].admission_no%></td>
+                            <td><%=admissionDetails[i].payment_mode%></td>
+                            <td><%=admissionDetails[i].stud_class%></td>
+
+                            <td class="text-center mt-2 ">
+                                <button onclick="downloadPDF('<%=admissionDetails[i].admission_no%>')"><i class="fa fa-arrow-down p-2"></i></button>
+                                <button class="ms-2" onclick="printDetails('<%=admissionDetails[i].admission_no%>')"><i class="fa-solid fa-print p-2"></i></button>
+                            </td>
+
+            <td style="<%= admissionDetails[i].adm_approval === 'approve' ? 'color: green;' : (admissionDetails[i].adm_approval === 'reject' ? 'color: red;' : '') %>">
+                            <%= admissionDetails[i].adm_approval %>
+                            </td>
+                            
+
+                            <td>
+                                <% if (admissionDetails[i].payment_mode === 'online') { %>
+                                    <%= admissionDetails[i].transactionDateTime %>
+                                <% } else if (admissionDetails[i].payment_mode === 'cash') { %>
+                                    <%= admissionDetails[i].dateTime %>
+                                <% } %>
+                            </td>
+                          
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>No admission forms submitted yet. Please fill out the form to see the details.</p>
+        <% } %>
+    </div>
+</div>
+
+    <%- include('footer.ejs') %>
+
+
+
+    
+</body>
+</html>

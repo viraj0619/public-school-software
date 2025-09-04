@@ -1,0 +1,42 @@
+<%- include('navbar.ejs') %>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center heading">
+                <h3>Edit Contact Page</h3>
+            </div>
+        </div>
+    </div>
+    <form action="/admin/update_contactform" method="post">
+    <div class="container">
+        <input type="hidden" name="" id="" value="<%=contacts[0].contact_id%>">
+        <div class="row my-3">
+            <div class="col-md-6">
+                 First Mobile No:<h2><input type="text" class="form-control"  name="first_con_no" value="<%=contacts[0].first_con_no%>"  ></h2>
+            </div>
+            <div class="col-md-6">
+                Second Mobile No:<h2><input type="text" class="form-control"  name="sec_con_no" value="<%=contacts[0].sec_con_no%>" ></h2>
+            </div>
+            <div class="col-md-6">
+                First Mail Id:<h2><input type="text" class="form-control"  name="fir_mail_id" value="<%=contacts[0].fir_mail_id%>" ></h2>
+            </div>
+            <div class="col-md-6">
+                Second Mail Id:<h2><input type="text" class="form-control"  name="sec_mail_id" value="<%=contacts[0].sec_mail_id%>" ></h2>
+            </div>
+            <div class="col-md-6">
+                Our Address:<h2><textarea  id="" class="form-control"  name="address"   rows="2" ><%=contacts[0].address%></textarea></h2>
+            </div>
+            <div class="col-md-6">
+                Our Address2:<h2><textarea  id="" class="form-control"  name="address2"   rows="2" ><%=contacts[0].address2%></textarea></h2>
+            </div>
+            <div class="col-md-12 ">
+                    Google Map Link:( ONLY SRC PATH)<textarea  id="" class="form-control"  name="g_map_link" rows="3"><%=contacts[0].g_map_link%></textarea>
+            </div>
+            <div class=" my-3 d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary btn-lg ps-5 pe-5 " type="submit">Save</button>
+            </div>
+
+        </div>
+    </div>
+</form>
+
+ <%- include('footer.ejs') %>

@@ -1,0 +1,56 @@
+<%-include("navbar.ejs")%>
+
+<style>
+    .gradient-bg {
+      background-image: linear-gradient(to right, blue,darkblue, white);
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+    }
+  </style>
+<div class="container">
+    <div class="row  text-warning" >
+      <h1 class="d-flex justify-content-center gradient-bg p-0" style="background-image: linear-gradient(70% blue, 30% darkblue , 40% white);">Teacher Approval Sheet</h1>
+    </div>
+
+    <div class="row">
+        <table class="table table-striped table-bordered table-success ">
+            <tr>
+                <th>Sr.No</th>
+                <th>Action</th>
+                <th>Teacher Name</th>
+                <th>Class</th>
+                <th>Form No</th>
+                <th>Payment Mode</th>
+                <th>Admission Date</th>
+            </tr>
+            <%   apro.map((val,index)=>{ %>
+            <tr>
+                <td><%=index+1%></td>
+                <td class="text-center">
+                    <a href="/admin/approved/<%=val.admission_no%>" onclick="return(confirm('Are You sure'))"class="btn btn-success p-1  ">Approve</a>
+                    <a href="/admin/reject/<%=val.admission_no%> " onclick="return(confirm('Are You sure'))" class="btn btn-danger p-1 ms-2">Reject</a>
+                </td>
+                <td><%=val.teacher_name%> <%=val.admfull_middle%> <%=val.admfull_last%></td>
+                <td><%=val.stud_class%></td>
+                <td><%=val.admission_no%></td>
+                <td><%=val.payment_mode%> </td>
+                
+                <td>
+                    <% if(val.payment_mode ==='online'){ %>
+                        <%=val.transactionDateTime %>
+                       
+                       <% } else if(val.payment_mode ==='cash') {  %>
+                        <%=val.dateTime%>
+                        <% }%> 
+                </td>
+            </tr>
+            <% })  %>
+        </table>
+    </div>
+
+
+</div>
+
+
+<%-include("footer.ejs")%>

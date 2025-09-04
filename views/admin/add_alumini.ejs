@@ -1,0 +1,37 @@
+<%-include('navbar.ejs')%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 heading text-center">
+            <h3>Add Alumini</h3>
+        </div>
+    </div>
+</div>
+<form action="/admin/add_alumini" method="post" enctype="multipart/form-data">
+<div class="container">
+    <div class="row my-4">
+        <div class="col-md-6">
+            <h6><b> Alumini Photo :</b></h6><input type="file" name="alumini_img" id="" class="form-control">
+        </div>
+        <div class="col-md-6">
+           <h6><b>Alumini Name :</b></h6> <input type="text" name="alumini_name" id="" class="form-control">
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-md-6">
+            <h6><b> Alumini STD :</b></h6><input type="text" name="alumini_std" id="" class="form-control">
+        </div>
+        <div class="col-md-6">
+           <h6><b>Alumini Percent :</b></h6> <input type="text" name="alumini_percent" id="" class="form-control">
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-md-6 d-grid gap-2 mx-auto">
+            <button class="btn btn-primary" type="submit">Save</button>
+
+        </div>
+    </div>
+</div>
+</form>
+
+<%-include('footer.ejs')%>

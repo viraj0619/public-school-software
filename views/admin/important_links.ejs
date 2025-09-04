@@ -1,0 +1,73 @@
+<%- include("navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center text-center gradient-background heading">
+            <h3 class="text-dark" style="font-weight: 600;">Update Important Links</h3>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form action="/admin/update_important_links" method="post" class="m-4" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-4">
+                  School ERP Link
+                  <input type="text" name="School_ERP_link" class="form-control" value="<%=important_links_info.School_ERP_link%>" required>
+                </div>
+                <div class="col-md-4">
+                  College ERP Link
+                  <input type="text" name="College_ERP_link" class="form-control" value="<%=important_links_info.College_ERP_link%>" required>
+              </div>
+              <div class="col-md-4">
+                University ERP Link
+                <input type="text" name="University_ERP_link" class="form-control" value="<%=important_links_info.University_ERP_link%>" required>
+            </div>
+            <div class="col-md-4">
+              Learning Management System Link
+              <input type="text" name="Learning_Management_link" class="form-control" value="<%=important_links_info.Learning_Management_link%>" required>
+          </div>
+          <div class="col-md-4">
+            Marketing Services Link
+
+            <input type="text" name="Marketing_Services_link" class="form-control" value="<%=important_links_info.Marketing_Services_link%>" required>
+        </div>
+        <div class="col-md-4">
+          FAQ Link
+          <input type="text" name="FAQ_link" class="form-control" value="<%=important_links_info.FAQ_link%>" required>
+      </div>
+      <div class="col-md-4">
+        Career Link
+        <input type="text" name="Career_link" class="form-control" value="<%=important_links_info.Career_link%>" required>
+    </div>
+    <div class="col-md-4">
+      Teachers Login Link
+      <input type="text" name="Teachers_Login" class="form-control" value="<%=important_links_info.Teachers_Login%>" required>
+  </div>
+  <div class="col-md-4">
+    Become A Partner Link
+    <input type="text" name="Become_Partner_link" class="form-control" value="<%=important_links_info.Become_Partner_link%>" required>
+</div>
+<div class="col-md-4">
+  About Us Link
+  <input type="text" name="About_Us_link" class="form-control" value="<%=important_links_info.About_Us_link%>" required>
+</div>
+<div class="col-md-4">
+  Testimonials Link
+  <input type="text" name="Testimonials_link" class="form-control" value="<%=important_links_info.Testimonials_link%>" required>
+</div>
+<div class="col-md-4">
+  Privacy Policy Link
+  <input type="text" name="Privacy_Policy_link" class="form-control" value="<%=important_links_info.Privacy_Policy_link%>" required>
+</div>
+<div class="col-md-4">
+  Terms and Conditions Link
+  <input type="text" name="Terms_Conditions_link" class="form-control" value="<%=important_links_info.Terms_Conditions_link%>" required>
+</div>
+ <div class="col-md-12 d-flex justify-content-center mt-4">
+                  <button class="btn btn-success">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

@@ -1,0 +1,374 @@
+<%-include("navbar.ejs")%>
+<header class="mebu_btn_slider">
+  <div class="menu_btn_slider"></div>
+</header>
+<!-- hero section -->
+<section class="home_slider">
+  <img  decoding="async" class="img_slide_slider active" src="https://schoolarchitects.in/wp-content/uploads/2019/08/best-architect-for-schools-in-mumbai.png" alt="Slide 1">
+  <img  decoding="async" class="img_slide_slider" src="https://wallpaperaccess.com/full/36316.jpg" alt="Slide 3">
+  <img  decoding="async" class="img_slide_slider" src="https://www.zastavki.com/pictures/originals/2014/Nature___Seasons___Spring_Beautiful_Nature_Landscape_in_spring_065897_.jpg" alt="Slide 4">
+  <img  decoding="async" class="img_slide_slider" src="https://getwallpapers.com/wallpaper/full/1/7/c/691526-nature-wallpaper-computer-3840x2160-tablet.jpg" alt="Slide 5">
+  <div class="content_slider_content active">
+      <h1 class="text-dark">USSF-44.<br><span>Mission</span></h1>
+      <p style="font-weight: 600;" class="text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+     
+  </div>
+
+  <img  decoding="async" class="img_slide_slider" src="https://images.hdqwalls.com/wallpapers/nature-hd-sd.jpg" alt="Slide 2">
+  <div class="content_slider_content">
+      <h1>STARSHIP<br><span> UPDATE.</span></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+     
+  </div>
+
+
+  
+  <div class="content_slider_content">
+      <h1>INTELSAT.<br><span>G-31MISSION</span></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+     
+  </div>
+  <div class="content_slider_content">
+      <h1>NASA ASTRONAUTS.<br><span> MOON</span></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+     
+  </div>
+  <div class="content_slider_content">
+      <h1>Space Travel.<br><span>Rocket</span></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="slider_navigation_slider">
+      <div class="nav_btn_slider active"></div>
+      <div class="nav_btn_slider"></div>
+      <div class="nav_btn_slider"></div>
+      <div class="nav_btn_slider"></div>
+      <div class="nav_btn_slider"></div>
+  </div>
+</section>
+<!-- hero section end -->
+  <div class="container mt-5 feedback" data-aos="fade-up" data-aos-duration="1000">
+    <div class="row ">
+      <h4 class="text-center" style="color: #0E3A57; font-weight: 700; font-family: Georgia, serif;">Our Students Feedback</h4>
+      <p class="text-center text-dark"><%=students_feedback_info.top_des%></p>
+      <div class="col-12">
+        <div class="mt-4" style="border: none; box-shadow: 0px 0px 10px black;background-color: #2446A2;">
+          <div class="row">
+            <div class="col-2">
+              <img src="/admin/uploads/<%=students_feedback_info.student_photo%>" height="120px" />
+            </div>
+            <div class="col-8 pt-4 veniam">
+              <h4><%=students_feedback_info.student_name%></h4>
+              <p class="text-white">(EXERCITATION)</p>
+            </div>
+
+            <div class="col-12 p-4">
+              <p><%=students_feedback_info.student_feedback%>
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Best Education start -->
+
+<div class="container mt-5 mb-5">
+  <div class="row">
+      <div class="col-12">
+          <div class="box">
+              <ul>
+                  <li class="text-center">
+                      <h4 class="text-white">Best Education</h4>
+                      <button class="pages1" onclick="page1()">1</button>
+                  </li>
+                  <li class="text-center">
+                      <h4 class="text-white">Top Management</h4>
+                      <button class="pages2" onclick="page2()">2</button>
+                  </li>
+                  <li class="text-center">
+                      <h4 class="text-white">Quality Meeting</h4>
+                      <button class="pages3" onclick="page3()">3</button>
+                  </li>
+              </ul>
+              <div class="all_page">
+                  <div id="page1">
+                      <div class="row">
+                          <div class="col-lg-6 col-sm-12">
+                              <img src="/admin/uploads/<%=edu_manag_qty.education_img%>" />
+                          </div>
+                          <div class="col-lg-6 col-sm-12">
+                              <h1 class="pb-2 pt-4"><%=edu_manag_qty.education_name%></h1>
+                              <p>
+                                <%=edu_manag_qty.education_des%>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div id="page2">
+                      <div class="row">
+                          <div class="col-lg-6 col-sm-12">
+                            <img src="/admin/uploads/<%=edu_manag_qty.management_img%>" />
+                          </div>
+                          <div class="col-lg-6 col-sm-12">
+                              <h1 class="pb-2 pt-4"><%=edu_manag_qty.management_name%></h1>
+                              <p><%=edu_manag_qty.management_des%>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="page3">
+                      <div class="row">
+                          <div class="col-lg-6 col-sm-12">
+                            <img src="/admin/uploads/<%=edu_manag_qty.qty_img%>" />
+                          </div>
+                          <div class="col-lg-6 col-sm-12">
+                              <h1 class="pb-2 pt-4"><%=edu_manag_qty.qty_name%></h1>
+                              <p>
+                                <%=edu_manag_qty.qty_des%>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+  <div class="container-fluid mt-5 mb-3 grad_school" >
+    <div class="row  p-0">
+      <div class="col-lg-6 col-sm-12 grad_school_part1" >
+        <h5 style="font-weight: 400; color: #CAD4DA; font-family: Georgia, serif;" data-aos="fade-down"  data-aos-duration="1000">OUR PRESENTATION IS FOR YOU</h5>
+        <h3 class="text-white" style="font-family: Georgia;" data-aos="fade-left"  data-aos-duration="1000">Watch the video to learn more <span class="text-warning">about Grad School</span></h3>
+        <p class="text-white" style="font-family:  serif;" data-aos="fade-right"  data-aos-duration="1000">You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can
+          use this template to convert into a specific theme for any kind of CMS platform such as WordPress. You may
+          <a href="" style="text-decoration: none;"> contact TemplateMo</a> for details.</p>
+
+        <p class="text-white pt-3" font-family:  serif; data-aos="fade-left"  data-aos-duration="1000">Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
+        <button style="border: none; background-color: #191e6d; padding: 10px 20px; color: #CAD4DA;">EXTERNAL URL</button>
+      </div>
+      <div class="col-lg-6 col-sm-12 grad_school_part2" >
+		  <a href="https://youtu.be/MbplbZmNye0?si=QJTRGPVVhV3lu-gq" style="text-decoration: none;" data-fancybox="gallery" data-caption="Caption Images 1">
+        <div class="card card-body p-0" style="background-color: transparent; border: none;background-image: url('https://themewagon.github.io/grad-school/assets/images/main-thumb.png');height:400px;width:100%;" data-aos="flip-up"  data-aos-duration="1000">
+          <div  style="height: 60px; width: 100%; background-color: rgba(238, 235, 235, 0.2); margin-top: 340px;">
+            <p class="text-white pt-2 text-center">POWER HTML template
+            <i class="fa-solid fa-play text-white " style="margin-left: 70px; background-color: #191e6d; padding: 14px;border-radius: 50%;" onclick="main_img.src = this.src"></i>
+          </p>
+          </div>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+  <div class="container adminitstrative_home mt-5" style="background-color: #191e6d;box-shadow: 0px 0px 20px #191e6d;">
+    <div class="row p-5">
+      <h1 class="text-center " style="color: #0E3A57; font-family: cursive;color: white;">Adminitstrative</h1>
+      <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+        <div class="p-1 adminitstrative_card " data-aos="fade-down"  data-aos-duration="1000">
+            <i class="fa-solid fa-gopuram" style="font-size: 70px; color: #191e6d; "></i>
+          <h3 class="text-center p-3" style="color: #0E3A57; font-family:  serif;">Institude Management </h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+        <div class="p-1 adminitstrative_card" data-aos="fade-down"  data-aos-duration="00">
+          <i class="fa-regular fa-user text-center" style="font-size: 70px; color: #191e6d; font-weight: 100;"></i>
+          <h3 class="text-center p-3" style="color: #0E3A57; font-family:  serif;">School Management </h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mt-3" data-aos="fade-down"  data-aos-duration="1000">
+        <div class="p-1 adminitstrative_card">
+          <i class="fa-regular fa-circle-user text-center" style="font-size: 70px; color: #191e6d ;"></i>
+          <h3 class="text-center p-3" style="color: #0E3A57; font-family:  serif;">Admission Management </h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mt-3" data-aos="fade-down"  data-aos-duration="1000">
+        <div class="p-1 adminitstrative_card">
+          <i class="fa-regular fa-id-badge text-center" style="font-size: 70px; color: #191e6d;"></i>
+          <h3 class="text-center p-3" style="color: #0E3A57; font-family:  serif;">Starf Management </h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mt-3" data-aos="fade-down"  data-aos-duration="1000">
+        <div class="p-1 adminitstrative_card">
+          <i class="fa-solid fa-book-open  text-center" style="font-size: 70px; color: #191e6d;"></i></i>
+          <h3 class="text-center p-3" style="color: #0E3A57; font-family:  serif;">Library Management </h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mt-3" data-aos="fade-down"  data-aos-duration="1000">
+        <div class="p-1 adminitstrative_card">
+          <i class="fa-solid fa-van-shuttle text-center" style="font-size: 70px; color: #191e6d;"></i>
+          <h3 class="text-center p-3" style="color: #0E3A57; font-family:  serif;">Institude Management </h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mt-3" data-aos="fade-down"  data-aos-duration="1000">
+        <div class="p-1 adminitstrative_card">
+          <i class="fa-solid fa-hotel text-center" style="font-size: 70px; color: #191e6d;"></i>
+          <h3 class="text-center p-3" style="color: #0E3A57; font-family:  serif;">Institude Management </h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mt-3" data-aos="fade-down"  data-aos-duration="1000">
+        <div class="p-1 adminitstrative_card">
+          <i class="fa-solid fa-cart-plus text-center" style="font-size: 70px; color: #191e6d;"></i>
+          <h3 class="text-center p-3" style="color: #0E3A57; font-family:  serif;">Institude Management </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="container mt-5 mb-5 video_container" style="background-color: rgba(102, 88, 183, 0.3); ">
+    <div class="row">
+      <div class="col-12 ">
+        <h2  style="color: #0E3A57; font-family: Georgia, serif;">Watch To Have Live Experience
+        </h2>
+      </div>
+      <div class="col-12">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div class="carousel-indicators">
+            <button type="button" style="height: 20px; width: 20px;border-radius: 50%;" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" style="height: 20px; width: 20px;border-radius: 50%;" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner" >
+            <%for(var i=0;i<youtube_link.length;i++){%>
+            <div class="carousel-item active" data-bs-interval="10000" style="padding-bottom: 80px;">
+              <div class="container-fluid">
+                <div class="row " style="width: 100%;">
+                  <div class="col-4">
+                    <div class="card card-body p-1" style="border: none;">
+                      <video  controls >
+                        <source src="<%=youtube_link[i].video_link1%>" type="video/mp4"/>
+                      </video>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="card card-body p-1" style="border: none;">
+                      <video  controls >
+                        <source src="<%=youtube_link[i].video_link2%>" type="video/mp4"/>
+                      </video>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="card card-body p-1" style="border: none;">
+                      <video  controls >
+                        <source src="<%=youtube_link[i].video_link2%>" type="video/mp4"/>
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <%}%>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12 mt-3 mb-3">
+        <h1 class="text-center" style="font-family:  cursive;color: #2446A2;">FAQ's : </h1>
+      </div>
+      <%for(var i=0;i<FAQ_data.length;i++){%>
+      <div class="col-lg-6 col-sm-12 mt-3">
+        <details class="form-control p-3  " style="background-color:#2446A2;">
+          <summary class="text-white" style="background-color: #2446A2;" >
+            Read More..
+          </summary>
+          <p class="text-white" style="border-top: 2px solid #2446A2; padding-top: 20px; padding-bottom: 20px;">Lorem
+            <%=FAQ_data[i].faq_name%> </p>
+        </details>
+      </div>
+ <%}%>
+
+    </div>
+  </div>
+
+<div class="mt-5 mb-5 location_on">
+  <div class="row">
+    <div class="col-12 ">
+      <iframe src="<%=contact_data.g_map_link%>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+  </div>
+</div>
+
+<script>
+  AOS.init();
+</script>
+
+<script>
+	// Fancybox Configuration
+$('[data-fancybox="gallery"]').fancybox({
+  buttons: [
+    "slideShow",
+    "thumbs",
+    "zoom",
+    "fullScreen",
+    "share",
+    "close"
+  ],
+  loop: false,
+  protect: true
+});
+
+  </script>
+<script>
+  const btns = document.querySelectorAll(".nav_btn_slider");
+  const slides = document.querySelectorAll(".img_slide_slider");
+  const contents = document.querySelectorAll(".content");
+
+  var sliderNav = function(manual){
+      btns.forEach((btn) => {
+          btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+          slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+          content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+  }
+
+  btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+          sliderNav(i)
+      });
+  });
+</script>
+<!-- Best Education -->
+<script>
+  function page1() {
+      document.getElementById("page1").style.display = "block";
+      document.getElementById("page2").style.display = "none";
+      document.getElementById("page3").style.display = "none";
+
+  }
+  function page2() {
+      document.getElementById("page2").style.display = "block";
+      document.getElementById("page1").style.display = "none";
+      document.getElementById("page3").style.display = "none";
+  }
+  function page3() {
+      document.getElementById("page3").style.display = "block";
+      document.getElementById("page2").style.display = "none";
+      document.getElementById("page1").style.display = "none";
+  }
+</script>
+<%-include("footer.ejs")%>

@@ -1,0 +1,55 @@
+<%-include('navbar.ejs')%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class=" heading text-center">
+                <h3>Total Card List</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table  class=" table table-stripped " >
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Action</th>
+                    <th>Card Image</th>
+                    <th>Card Title</th>
+                    <th>Card Description </th>
+                </tr>
+
+                <%  card.map((val)=>  {  %>
+
+
+                    <tr>
+                        <td><%=val.card_id %></td>
+                        <td>
+                            <a href="/admin/edit_card/<%=val.card_id %>"> 
+                                <button class=" rounded-3 fs-4 ps-3 pe-3 mt-2 btn btn-outline-danger">
+                                    <i class="fa fa-pencil "></i></button>
+                            </a>
+                            
+                        </td>
+                        <td class="">
+                            <img src="/uploads/<%= val.card_img %>" alt="" height="80px" width="100px" >
+                        </td>
+                       
+                        <td><%= val.card_title %></td>
+                        <td><%= val.card_descrip %></td>
+                    </tr>
+
+                    <%  })  %>
+
+
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<%-include('footer.ejs')%>
